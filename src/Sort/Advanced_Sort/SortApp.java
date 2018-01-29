@@ -7,15 +7,13 @@ package Sort.Advanced_Sort;
 public class SortApp {
     public static void main(String[] args) {
         int maxSize = 10;
-        ShellSort shellSort = new ShellSort(maxSize);
+       //数组定义
 
         for(int j=0;j<maxSize;j++){
             long n=(int)(Math.random()*99);
-            shellSort.insert(n);
+            //数据插入
         }
 
-        shellSort.display();
-        shellSort.shellSort();
-        shellSort.display();
+        //排序+display()
     }
 }

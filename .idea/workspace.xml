@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="272ac1ff-1d37-4b5a-adb7-827c35396ad3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Sort/Advanced_Sort/QuickSort/QuickSort.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Sort/Advanced_Sort/SortApp.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Sort/Advanced_Sort/README.md" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Sort/Advanced_Sort/SortApp.java" afterPath="$PROJECT_DIR$/src/Sort/Advanced_Sort/SortApp.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SortApp.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SortApp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Sort/Advanced_Sort/SortApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="432">
+              <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -71,7 +67,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuickSort.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QuickSort.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sort/Advanced_Sort/QuickSort/QuickSort.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
@@ -106,9 +102,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/HashTable/README.md" />
         <option value="$PROJECT_DIR$/src/Sort/Simple_Sort/README.md" />
-        <option value="$PROJECT_DIR$/src/Sort/Advanced_Sort/SortApp.java" />
         <option value="$PROJECT_DIR$/src/Sort/Advanced_Sort/Quick.java" />
         <option value="$PROJECT_DIR$/src/Sort/Advanced_Sort/QuickSort/QuickSort.java" />
+        <option value="$PROJECT_DIR$/src/Sort/Advanced_Sort/SortApp.java" />
       </list>
     </option>
   </component>
@@ -332,12 +328,12 @@
       <workItem from="1516071558235" duration="1269000" />
       <workItem from="1516072983985" duration="2850000" />
       <workItem from="1516970260034" duration="428000" />
-      <workItem from="1517195608996" duration="7198000" />
+      <workItem from="1517195608996" duration="7279000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11760000" />
+    <option name="totallyTimeSpent" value="11841000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -380,13 +376,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Sort/Advanced_Sort/SortApp.java</url>
-          <line>17</line>
-          <properties />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
     <watches-manager />
@@ -506,14 +495,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sort/Advanced_Sort/SortApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Sort/Advanced_Sort/ShellSort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -557,6 +538,14 @@
             <element signature="e#588#589#0" expanded="true" />
             <element signature="e#631#632#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sort/Advanced_Sort/SortApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
