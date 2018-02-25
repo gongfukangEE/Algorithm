@@ -94,7 +94,7 @@ public class Tree {
             if (current == root)
                 root = current.rightChild;
             else if (isLeftChild)
-                parent.leftChild = current.leftChild;
+                parent.leftChild = current.rightChild;
             else
                 parent.rightChild = current.rightChild;
         } else {
