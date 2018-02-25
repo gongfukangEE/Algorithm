@@ -114,7 +114,7 @@ public class Tree {
 
     private Node getSuccessor(Node delNode) {
         Node successorParent = delNode;
-        Node successor = delNode;
+        Node successor = delNode.rightChild;
         Node current = delNode.rightChild;
         while (current != null) {
             successorParent = successor;
