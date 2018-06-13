@@ -1,4 +1,4 @@
-package BinaryTree;
+package DataStructures.BinaryTree;
 
 /**
  * @Auther gongfukang

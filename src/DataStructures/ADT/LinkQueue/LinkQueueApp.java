@@ -1,4 +1,4 @@
-package ADT.LinkQueue;
+package DataStructures.ADT.LinkQueue;
 
 /**
  * @Auther gongfukang

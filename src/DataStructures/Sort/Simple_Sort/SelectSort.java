@@ -1,4 +1,4 @@
-package Sort.Simple_Sort;
+package DataStructures.Sort.Simple_Sort;
 
 /**
  * @Auther gongfukang

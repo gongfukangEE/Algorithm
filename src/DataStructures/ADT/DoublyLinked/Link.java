@@ -1,4 +1,4 @@
-package ADT.DoublyLinked;
+package DataStructures.ADT.DoublyLinked;
 
 /**
  * @Auther gongfukang

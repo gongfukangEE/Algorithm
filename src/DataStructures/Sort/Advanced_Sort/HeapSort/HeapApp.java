@@ -1,4 +1,4 @@
-package Sort.Advanced_Sort.HeapSort;
+package DataStructures.Sort.Advanced_Sort.HeapSort;
 
 import java.io.BufferedReader;
 import java.io.IOException;

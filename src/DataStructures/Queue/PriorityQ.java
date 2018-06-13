@@ -1,4 +1,4 @@
-package Queue;
+package DataStructures.Queue;
 
 /**
  * @Auther gongfukang

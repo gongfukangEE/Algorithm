@@ -1,7 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="272ac1ff-1d37-4b5a-adb7-827c35396ad3" name="Default" comment="" />
+    <list default="true" id="1a1e92e6-6549-4bcf-9c3c-c4b780e0f8e0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Data-Structures-Java.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/ADT/DoublyLinked/DoublyLinkedApp.java" afterPath="$PROJECT_DIR$/src/DataStructures/ADT/DoublyLinked/DoublyLinkedApp.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/ADT/DoublyLinked/DoublyLinkedList.java" afterPath="$PROJECT_DIR$/src/DataStructures/ADT/DoublyLinked/DoublyLinkedList.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/ADT/DoublyLinked/Link.java" afterPath="$PROJECT_DIR$/src/DataStructures/ADT/DoublyLinked/Link.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/ADT/LinkQueue/FirstLastList.java" afterPath="$PROJECT_DIR$/src/DataStructures/ADT/LinkQueue/FirstLastList.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/ADT/LinkQueue/Link.java" afterPath="$PROJECT_DIR$/src/DataStructures/ADT/LinkQueue/Link.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/ADT/LinkQueue/LinkQueue.java" afterPath="$PROJECT_DIR$/src/DataStructures/ADT/LinkQueue/LinkQueue.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/ADT/LinkQueue/LinkQueueApp.java" afterPath="$PROJECT_DIR$/src/DataStructures/ADT/LinkQueue/LinkQueueApp.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/ADT/LinkStack/Link.java" afterPath="$PROJECT_DIR$/src/DataStructures/ADT/LinkStack/Link.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/ADT/LinkStack/LinkList.java" afterPath="$PROJECT_DIR$/src/DataStructures/ADT/LinkStack/LinkList.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/ADT/LinkStack/LinkStack.java" afterPath="$PROJECT_DIR$/src/DataStructures/ADT/LinkStack/LinkStack.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/ADT/LinkStack/LinkStackApp.java" afterPath="$PROJECT_DIR$/src/DataStructures/ADT/LinkStack/LinkStackApp.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/BinaryTree/Node.java" afterPath="$PROJECT_DIR$/src/DataStructures/BinaryTree/Node.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/BinaryTree/Tree.java" afterPath="$PROJECT_DIR$/src/DataStructures/BinaryTree/Tree.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/BinaryTree/TreeApp.java" afterPath="$PROJECT_DIR$/src/DataStructures/BinaryTree/TreeApp.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Graph/BFS/BFSApp.java" afterPath="$PROJECT_DIR$/src/DataStructures/Graph/BFS/BFSApp.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Graph/BFS/Graph.java" afterPath="$PROJECT_DIR$/src/DataStructures/Graph/BFS/Graph.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Graph/BFS/Queue.java" afterPath="$PROJECT_DIR$/src/DataStructures/Graph/BFS/Queue.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Graph/BFS/Vertex.java" afterPath="$PROJECT_DIR$/src/DataStructures/Graph/BFS/Vertex.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Graph/DFS/DFSApp.java" afterPath="$PROJECT_DIR$/src/DataStructures/Graph/DFS/DFSApp.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Graph/DFS/Graph.java" afterPath="$PROJECT_DIR$/src/DataStructures/Graph/DFS/Graph.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Graph/DFS/StackX.java" afterPath="$PROJECT_DIR$/src/DataStructures/Graph/DFS/StackX.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Graph/DFS/Vertex.java" afterPath="$PROJECT_DIR$/src/DataStructures/Graph/DFS/Vertex.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Graph/MST/Graph.java" afterPath="$PROJECT_DIR$/src/DataStructures/Graph/MST/Graph.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Graph/MST/MSTApp.java" afterPath="$PROJECT_DIR$/src/DataStructures/Graph/MST/MSTApp.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Graph/MST/StackX.java" afterPath="$PROJECT_DIR$/src/DataStructures/Graph/MST/StackX.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Graph/MST/Vertex.java" afterPath="$PROJECT_DIR$/src/DataStructures/Graph/MST/Vertex.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Graph/TOPO/Graph.java" afterPath="$PROJECT_DIR$/src/DataStructures/Graph/TOPO/Graph.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Graph/TOPO/TopoApp.java" afterPath="$PROJECT_DIR$/src/DataStructures/Graph/TOPO/TopoApp.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Graph/TOPO/Vertex.java" afterPath="$PROJECT_DIR$/src/DataStructures/Graph/TOPO/Vertex.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/GraphW/MSTW/Edge.java" afterPath="$PROJECT_DIR$/src/DataStructures/GraphW/MSTW/Edge.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/GraphW/MSTW/Graph.java" afterPath="$PROJECT_DIR$/src/DataStructures/GraphW/MSTW/Graph.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/GraphW/MSTW/MSTWApp.java" afterPath="$PROJECT_DIR$/src/DataStructures/GraphW/MSTW/MSTWApp.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/GraphW/MSTW/PriorityQ.java" afterPath="$PROJECT_DIR$/src/DataStructures/GraphW/MSTW/PriorityQ.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/GraphW/MSTW/Vertex.java" afterPath="$PROJECT_DIR$/src/DataStructures/GraphW/MSTW/Vertex.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/GraphW/PATH/DisPar.java" afterPath="$PROJECT_DIR$/src/DataStructures/GraphW/PATH/DisPar.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/GraphW/PATH/Edge.java" afterPath="$PROJECT_DIR$/src/DataStructures/GraphW/PATH/Edge.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/GraphW/PATH/Graph.java" afterPath="$PROJECT_DIR$/src/DataStructures/GraphW/PATH/Graph.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/GraphW/PATH/PathApp.java" afterPath="$PROJECT_DIR$/src/DataStructures/GraphW/PATH/PathApp.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/GraphW/PATH/Vertex.java" afterPath="$PROJECT_DIR$/src/DataStructures/GraphW/PATH/Vertex.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Heap/Heap.java" afterPath="$PROJECT_DIR$/src/DataStructures/Heap/Heap.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Heap/HeapApp.java" afterPath="$PROJECT_DIR$/src/DataStructures/Heap/HeapApp.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Heap/Node.java" afterPath="$PROJECT_DIR$/src/DataStructures/Heap/Node.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/LinkList/FirstLastLink/FirstLastList.java" afterPath="$PROJECT_DIR$/src/DataStructures/LinkList/FirstLastLink/FirstLastList.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/LinkList/FirstLastLink/FirstLastListApp.java" afterPath="$PROJECT_DIR$/src/DataStructures/LinkList/FirstLastLink/FirstLastListApp.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/LinkList/FirstLastLink/Link.java" afterPath="$PROJECT_DIR$/src/DataStructures/LinkList/FirstLastLink/Link.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/LinkList/LinkList/Link.java" afterPath="$PROJECT_DIR$/src/DataStructures/LinkList/LinkList/Link.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/LinkList/LinkList/LinkList.java" afterPath="$PROJECT_DIR$/src/DataStructures/LinkList/LinkList/LinkList.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/LinkList/LinkList/LinkListApp.java" afterPath="$PROJECT_DIR$/src/DataStructures/LinkList/LinkList/LinkListApp.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Queue/PriorityQ.java" afterPath="$PROJECT_DIR$/src/DataStructures/Queue/PriorityQ.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Queue/Queue.java" afterPath="$PROJECT_DIR$/src/DataStructures/Queue/Queue.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/HeapSort/Heap.java" afterPath="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/HeapSort/Heap.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/HeapSort/HeapApp.java" afterPath="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/HeapSort/HeapApp.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/HeapSort/Node.java" afterPath="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/HeapSort/Node.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/MergeSort_1.java" afterPath="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/MergeSort_1.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/MergeSort_2.java" afterPath="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/MergeSort_2.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/Partition.java" afterPath="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/Partition.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/QuickSort/QuickSort.java" afterPath="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/QuickSort/QuickSort.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/ShellSort.java" afterPath="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/ShellSort.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/SortApp.java" afterPath="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/SortApp.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Sort/Simple_Sort/BubbleSort.java" afterPath="$PROJECT_DIR$/src/DataStructures/Sort/Simple_Sort/BubbleSort.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Sort/Simple_Sort/InsertionSort.java" afterPath="$PROJECT_DIR$/src/DataStructures/Sort/Simple_Sort/InsertionSort.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Sort/Simple_Sort/SelectSort.java" afterPath="$PROJECT_DIR$/src/DataStructures/Sort/Simple_Sort/SelectSort.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Stack/Stack.java" afterPath="$PROJECT_DIR$/src/DataStructures/Stack/Stack.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -11,7 +80,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="DoublyLinkedApp.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DataStructures/ADT/DoublyLinked/DoublyLinkedApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -19,6 +99,19 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ADT.LinkQueue</find>
+      <find>Graph.MST</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>ADT.LinkQueue</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>D:\GitHub\Algorithm\src\DataStructures\ADT\DoublyLinked</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,11 +124,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/HashTable/README.md" />
-        <option value="$PROJECT_DIR$/src/Sort/Simple_Sort/README.md" />
-        <option value="$PROJECT_DIR$/src/Sort/Advanced_Sort/Quick.java" />
-        <option value="$PROJECT_DIR$/src/Sort/Advanced_Sort/QuickSort/QuickSort.java" />
-        <option value="$PROJECT_DIR$/src/Sort/Advanced_Sort/SortApp.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/BinaryTree/Tree.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/BinaryTree/TreeApp.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Graph/BFS/Vertex.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Graph/BFS/Queue.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Graph/BFS/Graph.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Graph/BFS/BFSApp.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Graph/DFS/Vertex.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Graph/DFS/StackX.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Graph/DFS/Graph.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Graph/DFS/DFSApp.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Graph/MST/Graph.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Graph/MST/MSTApp.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Graph/MST/StackX.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Graph/MST/Vertex.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Graph/TOPO/Vertex.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Graph/TOPO/TopoApp.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Graph/TOPO/Graph.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/GraphW/MSTW/Edge.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/GraphW/MSTW/Graph.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/GraphW/MSTW/MSTWApp.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/GraphW/MSTW/PriorityQ.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/GraphW/MSTW/Vertex.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/GraphW/PATH/DisPar.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/GraphW/PATH/Edge.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/GraphW/PATH/PathApp.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/GraphW/PATH/Vertex.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/GraphW/PATH/Graph.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Heap/Heap.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Heap/HeapApp.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Heap/Node.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/LinkList/FirstLastLink/Link.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/LinkList/FirstLastLink/FirstLastListApp.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/LinkList/FirstLastLink/FirstLastList.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/LinkList/LinkList/Link.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/LinkList/LinkList/LinkList.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/LinkList/LinkList/LinkListApp.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Queue/Queue.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Queue/PriorityQ.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Stack/Stack.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Sort/Simple_Sort/BubbleSort.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Sort/Simple_Sort/InsertionSort.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Sort/Simple_Sort/SelectSort.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/SortApp.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/ShellSort.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/Partition.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/MergeSort_2.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/MergeSort_1.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/QuickSort/QuickSort.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/HeapSort/Heap.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/HeapSort/HeapApp.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/HeapSort/Node.java" />
       </list>
     </option>
   </component>
@@ -45,11 +184,18 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/Soft/Maven/apache-maven-3.5.0-bin/apache-maven-3.5.0" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="width" value="1456" />
+    <option name="height" value="916" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -69,38 +215,37 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Data-Structures-Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Data-Structures-Java" type="462c0819:PsiDirectoryNode" />
+              <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Data-Structures-Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Data-Structures-Java" type="462c0819:PsiDirectoryNode" />
+              <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/IntelliJ IDEA/thinkInJava" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GitHub\Data-Structures-Java\src\Sort\Simple_Sort" />
-    </key>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -114,15 +259,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SortApp">
-    <configuration name="SortApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration name="DoublyLinkedApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Sort.Advanced_Sort.*" />
+          <option name="PATTERN" value="DataStructures.ADT.DoublyLinked.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Sort.Advanced_Sort.SortApp" />
+      <option name="MAIN_CLASS_NAME" value="DataStructures.ADT.DoublyLinked.DoublyLinkedApp" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -131,15 +283,8 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Data-Structures-Java" />
+      <module name="Algorithm" />
       <envs />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -166,7 +311,7 @@
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -174,12 +319,6 @@
       </option>
       <envs />
       <patterns />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -201,7 +340,7 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <option name="OUTPUT_DIRECTORY" />
       <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
@@ -215,9 +354,15 @@
       <properties />
       <listeners />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
     <recent_temporary>
       <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.SortApp" />
+        <item index="0" class="java.lang.String" itemvalue="Application.DoublyLinkedApp" />
       </list>
     </recent_temporary>
   </component>
@@ -229,53 +374,51 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="272ac1ff-1d37-4b5a-adb7-827c35396ad3" name="Default" comment="" />
-      <created>1516071478787</created>
+      <changelist id="1a1e92e6-6549-4bcf-9c3c-c4b780e0f8e0" name="Default" comment="" />
+      <created>1528881399736</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1516071478787</updated>
-      <workItem from="1516071479974" duration="15000" />
-      <workItem from="1516071558235" duration="1269000" />
-      <workItem from="1516072983985" duration="2850000" />
-      <workItem from="1516970260034" duration="428000" />
-      <workItem from="1517195608996" duration="8917000" />
-      <workItem from="1517216988420" duration="12000" />
+      <updated>1528881399736</updated>
+      <workItem from="1528881402929" duration="11000" />
+      <workItem from="1528881483755" duration="693000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13491000" />
+    <option name="totallyTimeSpent" value="704000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="1912" y="-8" width="1456" height="916" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Redis Servers" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983193" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991013" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.116145834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33954155" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39915967" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,148 +428,469 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/BinaryTree/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinaryTree/Tree.java">
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Graph/BFS/Queue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1728">
-          <caret line="68" column="35" lean-forward="true" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HashTable/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Graph/BFS/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HashTable/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="459">
-            <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Graph/BFS/BFSApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sort/Advanced_Sort/HeapSort/Node.java">
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Graph/DFS/Vertex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Graph/DFS/StackX.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Graph/DFS/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Graph/DFS/DFSApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Graph/MST/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Graph/MST/MSTApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Graph/MST/StackX.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Graph/MST/Vertex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Graph/TOPO/Vertex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Graph/TOPO/TopoApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Graph/TOPO/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/GraphW/MSTW/Edge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/BinaryTree/Tree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/GraphW/MSTW/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sort/Advanced_Sort/HeapSort/HeapApp.java">
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/GraphW/MSTW/MSTWApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-610">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="162">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sort/Advanced_Sort/HeapSort/Heap.java">
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/GraphW/MSTW/PriorityQ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-502">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="162">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sort/Advanced_Sort/MergeSort_1.java">
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/GraphW/MSTW/Vertex.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="51" column="49" lean-forward="false" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sort/Advanced_Sort/MergeSort_2.java">
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/GraphW/PATH/DisPar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state relative-caret-position="162">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sort/Advanced_Sort/Partition.java">
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/GraphW/PATH/PathApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="162">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sort/Simple_Sort/README.md" />
-    <entry file="file://$PROJECT_DIR$/src/Sort/Advanced_Sort/ShellSort.java">
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/GraphW/PATH/Vertex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="46" column="17" lean-forward="true" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+        <state relative-caret-position="162">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sort/Advanced_Sort/README.md" />
-    <entry file="file://$PROJECT_DIR$/src/Sort/Advanced_Sort/Quick.java" />
-    <entry file="file://$PROJECT_DIR$/src/Sort/Advanced_Sort/SortApp.java">
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/GraphW/PATH/Edge.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        <state relative-caret-position="162">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinaryTree/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graph/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-369">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinaryTree/Tree.java">
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/GraphW/PATH/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="68" column="35" lean-forward="false" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
+        <state relative-caret-position="54">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sort/Simple_Sort/BubbleSort.java">
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Heap/Heap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sort/Advanced_Sort/QuickSort/QuickSort.java">
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Heap/HeapApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="34" column="30" lean-forward="true" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Heap/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/LinkList/FirstLastLink/Link.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/LinkList/FirstLastLink/FirstLastListApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/LinkList/FirstLastLink/FirstLastList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/LinkList/LinkList/Link.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/LinkList/LinkList/LinkList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/LinkList/LinkList/LinkListApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Queue/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Queue/PriorityQ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Stack/Stack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Sort/Simple_Sort/BubbleSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Sort/Simple_Sort/InsertionSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Sort/Simple_Sort/SelectSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/SortApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/ShellSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/Partition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/MergeSort_2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/MergeSort_1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/QuickSort/QuickSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/HeapSort/Heap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/HeapSort/HeapApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Sort/Advanced_Sort/HeapSort/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithm.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/ADT/DoublyLinked/DoublyLinkedApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

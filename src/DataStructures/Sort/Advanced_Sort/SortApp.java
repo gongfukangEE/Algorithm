@@ -1,4 +1,4 @@
-package Sort.Advanced_Sort;
+package DataStructures.Sort.Advanced_Sort;
 
 /**
  * @Auther gongfukang

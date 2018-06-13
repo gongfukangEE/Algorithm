@@ -1,4 +1,4 @@
-package Stack;
+package DataStructures.Stack;
 
 /**
  * @Auther gongfukang

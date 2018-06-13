@@ -1,4 +1,4 @@
-package LinkList.FirstLastLink;
+package DataStructures.LinkList.FirstLastLink;
 
 
 /**

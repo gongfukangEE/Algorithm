@@ -1,4 +1,4 @@
-package LinkList.LinkList;
+package DataStructures.LinkList.LinkList;
 
 
 /**

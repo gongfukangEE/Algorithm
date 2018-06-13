@@ -1,4 +1,4 @@
-package Heap;
+package DataStructures.Heap;
 
 import java.io.BufferedReader;
 import java.io.IOException;

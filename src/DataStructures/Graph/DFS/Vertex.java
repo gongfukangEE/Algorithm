@@ -1,4 +1,4 @@
-package Graph.DFS;
+package DataStructures.Graph.DFS;
 
 /**
  * @Auther gongfukang

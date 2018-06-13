@@ -1,8 +1,6 @@
-package GraphW.PATH;
+package DataStructures.GraphW.PATH;
 
-import GraphW.MSTW.Edge;
-import GraphW.MSTW.PriorityQ;
-import GraphW.MSTW.Vertex;
+import DataStructures.GraphW.MSTW.Vertex;
 
 /**
  * @Auther gongfukang

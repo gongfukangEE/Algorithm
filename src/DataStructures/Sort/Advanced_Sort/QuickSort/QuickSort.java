@@ -1,4 +1,4 @@
-package Sort.Advanced_Sort.QuickSort;
+package DataStructures.Sort.Advanced_Sort.QuickSort;
 
 
 /**

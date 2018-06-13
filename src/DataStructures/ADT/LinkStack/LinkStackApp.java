@@ -1,4 +1,4 @@
-package ADT.LinkStack;
+package DataStructures.ADT.LinkStack;
 
 /**
  * @Auther gongfukang

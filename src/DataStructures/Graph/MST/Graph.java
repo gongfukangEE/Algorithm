@@ -1,4 +1,4 @@
-package Graph.MST;
+package DataStructures.Graph.MST;
 
 /**
  * @Auther gongfukang

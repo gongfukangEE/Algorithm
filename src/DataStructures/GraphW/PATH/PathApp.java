@@ -1,4 +1,4 @@
-package GraphW.PATH;
+package DataStructures.GraphW.PATH;
 
 /**
  * @Auther gongfukang

@@ -1,4 +1,4 @@
-package Graph.BFS;
+package DataStructures.Graph.BFS;
 
 /**
  * @Auther gongfukang
