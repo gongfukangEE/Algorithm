@@ -31,6 +31,8 @@
 #### 参考
 
 - [《算法（第四版）》 [美] Robert Sedgewick ](https://book.douban.com/subject/19952400/)
+- [玩转 leetCode](https://coding.imooc.com/class/82.html)
+- [直通 BAT](https://www.nowcoder.com/courses/semester/algorithm)
 
 ### 刷题
 
