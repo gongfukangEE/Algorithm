@@ -46,8 +46,8 @@ public class Solution {
 
     public static void main(String[] args) {
         int n, k;
-        n = 4;
-        k = 2;
+        n = 5;
+        k = 3;
         System.out.println(combine(n, k));
     }
 }
