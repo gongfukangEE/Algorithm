@@ -1,6 +1,6 @@
 package Algorithm.LeetCode.T100;
 
-import Algorithm.LeetCode.commons.TreeNode;
+import Algorithm.commons.TreeNode;
 
 /**
  * @Auther gongfukang

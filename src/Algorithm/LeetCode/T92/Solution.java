@@ -1,7 +1,7 @@
 package Algorithm.LeetCode.T92;
 
-import Algorithm.LeetCode.commons.ListNode;
-import Algorithm.LeetCode.commons.ListNodeUtil;
+import Algorithm.commons.ListNode;
+import Algorithm.commons.ListNodeUtil;
 
 /**
  * @Auther gongfukang
@@ -43,8 +43,8 @@ public class Solution {
 
         ListNodeUtil listNodeUtil = new ListNodeUtil();
         int[] arr = {1,2,3,4,5,6,7,8,9};
-        listNodeUtil.displayList(listNodeUtil.createListNode(arr, 9));
-        ListNode head = listNodeUtil.createListNode(arr, 9);
+        listNodeUtil.displayList(listNodeUtil.createListNode(arr));
+        ListNode head = listNodeUtil.createListNode(arr);
         listNodeUtil.displayList(reverseBetween(head, 3, 7));
     }
 }

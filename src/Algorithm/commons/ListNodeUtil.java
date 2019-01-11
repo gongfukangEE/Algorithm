@@ -1,4 +1,4 @@
-package Algorithm.LeetCode.commons;
+package Algorithm.commons;
 
 /**
  * @Auther gongfukang
@@ -6,13 +6,14 @@ package Algorithm.LeetCode.commons;
  */
 public class ListNodeUtil {
 
-    public ListNode createListNode (int[] arr, int n) {
-        if (n == 0) {
+    // 尾插法建立链表
+    public ListNode createListNode (int[] arr) {
+        if (arr.length == 0) {
             return null;
         }
         ListNode head = new ListNode(arr[0]);
         ListNode curNode = head;
-        for (int i = 1; i < n; i++) {
+        for (int i = 1; i < arr.length; i++) {
             curNode.next = new ListNode(arr[i]);
             curNode = curNode.next;
         }

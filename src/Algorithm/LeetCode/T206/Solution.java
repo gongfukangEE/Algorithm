@@ -1,7 +1,7 @@
 package Algorithm.LeetCode.T206;
 
-import Algorithm.LeetCode.commons.ListNode;
-import Algorithm.LeetCode.commons.ListNodeUtil;
+import Algorithm.commons.ListNode;
+import Algorithm.commons.ListNodeUtil;
 
 /**
  * @Auther gongfukang
@@ -27,8 +27,8 @@ public class Solution {
 
         ListNodeUtil listNodeUtil = new ListNodeUtil();
         int[] arr = {1,2,3,4,5};
-        listNodeUtil.displayList(listNodeUtil.createListNode(arr, 5));
+        listNodeUtil.displayList(listNodeUtil.createListNode(arr));
         System.out.println();
-        listNodeUtil.displayList(reverseList(listNodeUtil.createListNode(arr, 5)));
+        listNodeUtil.displayList(reverseList(listNodeUtil.createListNode(arr)));
     }
 }

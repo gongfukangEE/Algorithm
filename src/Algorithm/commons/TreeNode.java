@@ -1,4 +1,4 @@
-package Algorithm.LeetCode.commons;
+package Algorithm.commons;
 
 /**
  * @Auther gongfukang
