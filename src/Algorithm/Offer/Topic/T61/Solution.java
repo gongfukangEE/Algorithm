@@ -1,9 +1,18 @@
 package Algorithm.Offer.Topic.T61;
 
+import Algorithm.commons.TreeNode;
+
 /**
  * @Auther gongfukang
  * @Date 1/21 21:35
  */
 public class Solution {
-    // todo
+
+    String Serialize(TreeNode root) {
+
+    }
+
+    TreeNode Deserialize(String str) {
+
+    }
 }

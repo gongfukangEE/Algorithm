@@ -5,12 +5,12 @@ package Algorithm.commons;
  * @Date 1/21 17:35
  */
 public class TreeLinkNode {
-    int val;
-    TreeLinkNode left = null;
-    TreeLinkNode right = null;
-    TreeLinkNode next = null;
+    public int val;
+    public TreeLinkNode left = null;
+    public TreeLinkNode right = null;
+    public TreeLinkNode next = null;
 
-    TreeLinkNode(int val) {
+    public TreeLinkNode(int val) {
         this.val = val;
     }
 }
