@@ -6,7 +6,7 @@ package DataStructures.Graph.BFS;
  */
 public class BFSApp {
     public static void main(String[] args) {
-        Graph theGraph=new Graph();
+        Graph theGraph = new Graph();
 
         theGraph.addVertex('A');
         theGraph.addVertex('B');
@@ -14,13 +14,14 @@ public class BFSApp {
         theGraph.addVertex('D');
         theGraph.addVertex('E');
 
-        theGraph.addEdge(0,1);
-        theGraph.addEdge(1,2);
-        theGraph.addEdge(0,3);
-        theGraph.addEdge(3,4);
+        theGraph.addEdge(0, 1);
+        theGraph.addEdge(1, 2);
+        theGraph.addEdge(0, 3);
+        theGraph.addEdge(3, 4);
 
         System.out.print("Visits: ");
-        theGraph.bfs();
+        for (Character c : theGraph.bfs())
+            System.out.print(c);
         System.out.println();
     }
 }

@@ -7,12 +7,4 @@ import Algorithm.commons.TreeNode;
  * @Date 1/21 21:35
  */
 public class Solution {
-
-    String Serialize(TreeNode root) {
-
-    }
-
-    TreeNode Deserialize(String str) {
-
-    }
 }

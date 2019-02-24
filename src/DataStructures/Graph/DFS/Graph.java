@@ -1,69 +1,87 @@
 package DataStructures.Graph.DFS;
 
+import java.util.ArrayList;
+import java.util.Stack;
+
 /**
  * @Auther gongfukang
  * @Date 2017/12/25 16:06
  * 图 邻接表/邻接矩阵
  */
 public class Graph {
-    private final int MAX_VERTS=20;
     private Vertex vertexList[];
     private int adjMat[][];
-    private int nVerts;
-    private StackX theSack;
+    private int nVertexs;
 
-    public Graph(){
-        vertexList =new Vertex[MAX_VERTS];
+    public Graph() {
+        int MAX_VERTEXS = 20;
+        vertexList = new Vertex[MAX_VERTEXS];
 
-        adjMat=new int[MAX_VERTS][MAX_VERTS];
-        nVerts=0;
+        adjMat = new int[MAX_VERTEXS][MAX_VERTEXS];
+        nVertexs = 0;
 
-        for(int j=0;j<MAX_VERTS;j++){
-            for(int k=0;k<MAX_VERTS;k++)
-                adjMat[j][k]=0;
+        for (int j = 0; j < MAX_VERTEXS; j++) {
+            for (int k = 0; k < MAX_VERTEXS; k++)
+                adjMat[j][k] = 0;
         }
-
-        theSack=new StackX();
     }
 
-    public void addVertex(char lab){
-        vertexList[nVerts++]=new Vertex(lab);
+    public void addVertex(char lab) {
+        vertexList[nVertexs++] = new Vertex(lab);
     }
 
-    public void addEdge(int start,int end){
-        adjMat[start][end]=1;
-        adjMat[end][start]=1;
+    public void addEdge(int start, int end) {
+        adjMat[start][end] = 1;
+        adjMat[end][start] = 1;
     }
 
-    public void displayVertex(int v){
-        System.out.print(vertexList[v].label);
-    }
+    public ArrayList<Character> dfs() {
+        Stack<Integer> stack = new Stack<>();
+        ArrayList<Character> resList = new ArrayList<>();
+        vertexList[0].wasVisited = true;
+        resList.add(vertexList[0].label);
+        stack.push(0);
 
-    public void dsf(){
-        vertexList[0].wasVisited=true;
-        displayVertex(0);
-        theSack.push(0);
-
-        while (!theSack.isEmpty()){
-            int v=getAdjUnvisitedVertex(theSack.peek());
-            if(v==-1)
-                theSack.pop();
-            else
-            {
-                vertexList[v].wasVisited=true;
-                displayVertex(v);
-                theSack.push(v);
+        while (!stack.isEmpty()) {
+            int v = getAdjUnvisitedVertex(stack.peek());
+            if (v == -1)
+                stack.pop();
+            else {
+                vertexList[v].wasVisited = true;
+                resList.add(vertexList[v].label);
+                stack.push(v);
             }
         }
 
-        for(int j=0;j<nVerts;j++)
-            vertexList[j].wasVisited=false;
+        for (int j = 0; j < nVertexs; j++)
+            vertexList[j].wasVisited = false;
+
+        return resList;
     }
 
-    public int getAdjUnvisitedVertex(int v){
-        for(int j=0;j<nVerts;j++)
-            if(adjMat[v][j]==1&& vertexList[j].wasVisited==false)
+    private int getAdjUnvisitedVertex(int v) {
+        for (int j = 0; j < nVertexs; j++)
+            if (adjMat[v][j] == 1 && !vertexList[j].wasVisited)
                 return j;
         return -1;
+    }
+
+    private ArrayList<Character> DFSResList = new ArrayList<>();
+
+    public ArrayList<Character> DFSTraverse() {
+        for (int i = 0; i < nVertexs; i++) {
+            if (!vertexList[i].wasVisited)
+                DFS(i);
+        }
+        return DFSResList;
+    }
+
+    private void DFS(int v) {
+        vertexList[v].wasVisited = true;
+        DFSResList.add(vertexList[v].label);
+        for (int j = 0; j < nVertexs; j++)
+            if (adjMat[v][j] == 1 && !vertexList[j].wasVisited)
+                DFS(j);
+        return;
     }
 }

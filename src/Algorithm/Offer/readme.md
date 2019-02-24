@@ -1,16 +1,143 @@
 # 目录
 
+[TOC]
+
 ## 1. [二维数组中的查找](https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e?tpId=13&tqId=11154&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking&tPage=1)
+
+1. 根据数组的递增特性，选择右上角的初始点 start
+2. 如果 target 大于 start，则向下移动；如果 target 小于 start 则向左移动
+
+```java
+public static boolean Find(int target, int[][] array) {
+    if （array == null || array.length == 0 || array[0].length == 0）{
+        return false;
+    } else {
+        int i = 0;
+        int j = array[0].length - 1;
+        while (i < array.length && j >= 0) {
+            int start = array[i][j];
+            if (target > start)
+                i++;
+            else if (target < start)
+                j--;
+            else 
+                return true;
+        }
+        return false; 
+    }
+}
+```
 
 ## 2. [替换空格](https://www.nowcoder.com/practice/4060ac7e3e404ad1a894ef3e17650423?tpId=13&tqId=11155&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking&tPage=1)
 
-## 3. [从尾到头打印链表](https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035?tpId=13&tqId=11156&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+1. 从前先向后扫描，遇到空格，在尾部补任意两个字符串，使得补充后的字符串长度和替换后的字符串长度相等
+2. P1 为原字符串尾部，P2 为现字符串尾部，从后向前扫描，遇到非空格，在 P2 位置补原字符，遇到空格在 P2 位置补 02%
 
-## 4. [重建二叉树](https://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6?tpId=13&tqId=11157&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+```java
+public String replaceSpace(StringBuffer str) {
+    int p1 = str.length() - 1;
+    for (int i = 0; i <= p1; i++)
+        if (str.charAt(i) == ' ')
+            str.append("##");
+    int p2 = str.length() - 1;
+    for (int i = p1; i >= 0; i--) {
+        if (str.charAt(i) != ' ') 
+            str.setCharAt(p2--, str.charAt(i)); 
+        else {
+            str.setCharAt(p2--, '0');
+            str.setCharAt(p2--, '2');
+            str.setCharAt(p2--, '%');
+        }
+    }
+    return str.toString();
+}
+```
+
+## 3. [从尾到头打印链表值](https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035?tpId=13&tqId=11156&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**递归**
+
+1. 递归终止条件：`listNode == null`
+2. 不满足终止条件，执行递归，传入 `listNode.next`
+3. 递归语句后，将节点值添加到 List 中
+
+```java
+public ArryList<Integer> printListFromTailToHead(ListNode listNode) {
+    ArrayList<Integer> resList = new ArrayList<Integer>();
+    if (listNode != null)
+        printListFromTailToHead(listNode, resList);
+    return resList;
+}
+public ArryList<Integer> printListFromTailToHead(ListNode listNode, ArrayList<Integer> resList) {
+    if (listNode != null) {
+        printListFromTailToHead(listNode.next, resList);
+        resList.add(listNode.val);
+    } else {
+        return;
+    }
+}
+```
+
+## 4. [根据前序和中序遍历重建二叉树](https://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6?tpId=13&tqId=11157&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**递归**
+
+1. 先序遍历的第一个位置是 root 节点。中序遍历的 root 节点位置在中间 p，在 root 节点左边的肯定是 root 的左子树的中序数组，在 root 节点右边的肯定是 root 的右子树的中序数组。先序遍历的第二个位置到 p，就是 root 左子树的先序数组，p 右边就是 root 右子树的先序数组
+2. 存储中序遍历的节点和索引值
+3. 找到先序遍历的 root 节点，初始为左边缘节点，递归过程中不断更新
+4. 找到 root 节点在中序遍历中的索引，计算出左子树和右子树的大小
+5. 模拟先序遍历过程，递归插入左子树和右子树
+
+```java
+private HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+public TreeNode reConstructBinaryTree(int [] pre,int [] in) {
+    for (int i = 0; i < in.lenght; i++)
+        map.put(in[i], i);
+    return reConstructBinaryTree(pre, 0, pre.length - 1, 0);
+}
+public TreeNode reConstructBinaryTree(int[] pre, int preL, int preR, int inL) {
+    if (preR < preL)
+        return null;
+    TreeNode root = new TreeNode(pre[preL]);
+    int index = map.get(root.val);
+    int leftSize = index - inL;
+    root.left = reConstructBinaryTree(pre, preL + 1, preL + leftSize, inL);
+    root.right = reConstructBinaryTree(pre, preL + leftSize + 1, inL + leftSise + 1);
+    return root;
+}
+```
 
 ## 5. [两个栈实现队列](https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6?tpId=13&tqId=11158&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+1. stack1 入栈用来模拟元素入队
+2. 出队时，如果 stack2 为空，则先将 stack1 中的元素添加到 stack2 中；如果不为空，直接 stack2 出栈用来模拟元素出队
+
+```java
+Stack<Integer> stack1 = new Stack<Integer>();
+Stack<Integer> stack2 = new Stack<Integer>();
+public void push(int node) {
+    stack1.push(node);
+}
+public int pop() {
+    if (stack2.isEmpty()) {
+        while(!stack1.isEmpty()) {
+            stack2.push(stack1.pop());
+        }
+    } 
+    return stack2.pop();
+}
+```
+
 ## 6. [旋转数组的最小数字](https://www.nowcoder.com/practice/9f3231a991af4f55b95579b44b7a01ba?tpId=13&tqId=11159&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking&tPage=1)
+
+
+
+```java
+public int minNumberInRotateArray(int[] array) {
+    
+}
+```
 
 ## 7. [斐波那契数列](https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3?tpId=13&tqId=11160&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
