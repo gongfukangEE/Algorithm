@@ -44,10 +44,10 @@ public class Solution {
             return list1;
         }
         if (list1.val <= list2.val) {
-            Merge_II(list1.next, list2);
+            list1.next = Merge_II(list1.next, list2);
             return list1;
         } else {
-            Merge_II(list1, list2.next);
+            list2.next = Merge_II(list1, list2.next);
             return list2;
         }
     }

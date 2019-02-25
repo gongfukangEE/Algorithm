@@ -16,7 +16,7 @@ public class Solution {
         }
         ListNode head = new ListNodeUtil().createListNode(arr);
         new ListNodeUtil().displayList(head);
-        System.out.println(FindKthToTail_I(head, 20).val);
+        System.out.println(FindKthToTail(head, 20).val);
     }
 
     /**
@@ -24,7 +24,7 @@ public class Solution {
      * 2. 这时候 P2 指向 head，然后跟这 P1 一块移动
      * 3. 当 P1 移动到末尾时，P2 指向的就是倒数第 K 个节点
      */
-    public static ListNode FindKthToTail_I(ListNode head, int k) {
+    public static ListNode FindKthToTail(ListNode head, int k) {
         if (head == null || k == 0) {
             return null;
         }
@@ -43,25 +43,5 @@ public class Solution {
         } else {
             return pre2;
         }
-    }
-
-    public static ListNode FindKthToTail_II(ListNode head, int k) {
-        if (head == null || k == 0) {
-            return null;
-        }
-        ListNode pre1 = head;
-        ListNode pre2 = head;
-
-        while (pre1 != null && k-- >= 0) {
-            pre1 = pre1.next;
-        }
-        if (k > 0) {
-            return null;
-        }
-        while (pre1 != null) {
-            pre1 = pre1.next;
-            pre2 = pre2.next;
-        }
-        return pre2;
     }
 }
