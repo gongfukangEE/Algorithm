@@ -13,11 +13,11 @@ public class Solution_II {
     /**
      * 排序
      * 比较 S1+S2 和 S2+S1，小的排前面，重写比较器
-     * 注意：Collections.sor 参数为 list
+     * 注意：Collections.sort 参数为 list
      */
     public String PrintMinNumber(int[] numbers) {
         String ret = "";
-        if (numbers.length == 0 || numbers == null) {
+        if (numbers.length == 0) {
             return ret;
         }
         int n = numbers.length;

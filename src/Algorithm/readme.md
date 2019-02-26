@@ -1,4 +1,4 @@
-
+# 剑指 Offer 和 LeetCode 题解
 
 [TOC]
 
@@ -577,35 +577,450 @@ public int min() {
 
 ## 21. [栈的压入、弹出序列](https://www.nowcoder.com/practice/d77d11405cc7470d82554cb392585106?tpId=13&tqId=11174&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+**栈和队列**
+
+1. 构建一个辅助栈实现
+2. pushA 按顺序压栈
+3. 如果栈顶元素与 popA 当前元素相等，则不断出栈，直到不相等
+4. 如果栈为空，pushA 和 popA 索引均为数组最右值，则匹配成功，否则失败
+
+```java
+private Stack<Integer> stack = new Stack<>();
+public boolean IsPopOrder(int[] pushA, int[] popA) {
+    int popIndex = 0;
+    int pushIndex = 0;
+    for (Integer item : pushA) {
+        ++pushIndex;
+        stack.push(item);
+        while(!stack.isEmpty() && stack.peek() == popA[popIndex]) {
+            stack.pop();
+            ++popIndex;
+        }
+    }
+    if (pushIndex == pushA.length && popIndex == pushIndex && stack.isEmpty())
+        return true;
+    else 
+        return false;
+}
+```
+
 ## 22. [从上往下打印二叉树](https://www.nowcoder.com/practice/7fe2212963db4790b57431d9ed259701?tpId=13&tqId=11175&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**二叉树**
+
+1. 边界检测，空与非空
+2. root 节点入队
+3. 队列不为空，出队，出队节点的左右子树入队
+
+```java
+public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
+    ArrayList<Integer> resList = new ArrayList<Integer>();
+    Queue<TreeNode> queue = new LinkedList<TreeNode>();
+    if (root == null) 
+        return resList;
+    else {
+        queue.offer(root);
+        while(!queue.isEmpty()){
+            TreeNode tempNode = queue.remove();
+            resList.add(tempNode.val);
+            if (tempNode.left != null)
+                queue.offer(tempNode.left);
+            if (tempNode.right != null)
+                queue.offer(tempNode.right);
+        }
+        return resList;
+    }
+}
+```
 
 ## 23. [二叉树的后序遍历序列](https://www.nowcoder.com/practice/a861533d45854474ac791d90e447bafd?tpId=13&tqId=11176&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+**二叉树**
+
+1. 后序遍历序列为左右根，因此数组中最后一个值为 root，左子树值均小于 root，右子树值均大于 root
+2. 确定 root
+3. 找到第一个大于 root 节点的值为右子树起点
+4. 遍历右子树，如果小于 root 返回 false
+5. 左右子树分别递归验证
+6. 递归终止条件：左边界与右边界差值小于等于 1
+
+```java
+public boolean VerifySquenceOfBST(int[] sequence) {
+    if (sequence == null || sequence.length == 0)
+        return false;
+    return doVerifySquenceOfBST(sequence, 0, sequence.length - 1);
+}
+private boolean doVerifySquenceOfBST(int[] sequence, int left, int right){
+	if (right - left <= 1)
+        return true;
+    int root = sequence[right];
+    int index = left;
+    while(index < right && sequence[index] < root)
+        index++;
+    for (int i = index; i < right; i++)
+        if (sequence[i] <= root)
+            return false;
+    return doVerifySquenceOfBST(sequence, left + 1, index - 1) & doVerifySquenceOfBST(sequence, index, right - 1);
+}
+```
+
 ## 24. [二叉树中和为某一值的路径](https://www.nowcoder.com/practice/b736e784e3e34731af99065031301bca?tpId=13&tqId=11177&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**递归 && 二叉树**
+
+1. 遍历到一个节点，list 中添加节点，sum 加上节点值
+2. 首先判断是不是叶节点，如果是叶节点，判断 `sum == target`，是就添加到 list 中
+3. 如果不是叶节点，左右子树分别递归
+4. 递归退出一层后，从 list 中删除当前节点，并在 sum 中减去节点值
+
+```java
+private ArrayList<ArrayList<Integer>> resList = new ArrayList<>();
+private ArrayList<Integer> list = new ArrayList<Integer>();
+private int sum = 0;
+public ArrayList<ArrayList<Integer>> FindPath(TreeNode root, int target) {
+   if (root == null || target == 0)
+       return resList;
+    doFindPath(root, target);
+    return resList;
+}
+private void doFindPath(TreeNode root, int target) {
+    if (root == null || sum > target)
+        return;
+    int val = root.val;
+    list.add(val);
+    sum += val;
+    if (root.left == null && root.right == null) {
+        if (sum == target)
+            resList.add(new ArrayList<Integer>(list));
+    } else {
+        doFindPath(root.left, target);
+        doFindPath(root.right, target);
+    }
+    list.remove((Object) val);
+    sum -= val;
+}
+```
 
 ## 25. [复杂链表的复制](https://www.nowcoder.com/practice/f836b2c43afc4b35ad6adc41ec941dba?tpId=13&tqId=11178&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+**链表**
+
+1. 复制每个节点，并依次插入，比如：A -> A1 -> B -> B1
+2. 将每个节点的 Random 值复制到 copy 节点上
+3. 将链表拆分为源链表和 copy 链表
+   1. 确保拆分成完全不相干的两个完整链表，`newHead = pHead.next` 来记录 copy 链表头
+   2. 保存节点的 next 信息，首先与第三个节点相连，再迭代到 next 节点
+
+```java
+public RandomListNode Clone(RandomListNode pHead) {
+    if (pHead == null)
+        return null;
+    RandomListNode copyHead = pHead;
+    while(copyHead != null) {
+        RandomListNode node = new RandomListNode(copyHead.label);
+        node.next = copyHead.next;
+        copyHead.next = node;
+        copyHead = node.next;
+    }
+    copyHead = pHead;
+    while (copyHead != null) {
+        if (copyHead.random != null)
+            copyHead.next.random = copyHead.random.next;
+        copyHead = copyHead.next.next;
+    }
+    copyHead = pHead;
+    RandomListNode newHead = pHead.next;
+    while (copyHead.next != null) {
+        RandomListNode tmp = copyHead.next;
+        copyHead.next = tmp.next;
+        copyHead = tmp;
+    }
+    return newHead;
+}
+```
+
 ## 26. [二叉树与双向链表](https://www.nowcoder.com/practice/947f6eb80d944a84850b0538bf0ec3a5?tpId=13&tqId=11179&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**链表 && 二叉树**
+
+1. 二叉树的中序遍历为排序数组
+2. 中序遍历为左根右，则若当前元素 `cur` 为根，`cur.pre = left;cur.next = right`。将其转换为双向链表，只需将 `cur.left = pre`，同时将 `cur` 节点为 `right`，`pre` 节点为根
+
+```java
+private TreeNode pre = null;
+private TreeNode head = null;
+public TreeNode Convert(TreeNode pRootOfTree) {
+    inOrder(pRootOfTree);
+    return head;
+}
+private void inOrder(TreeNode node) {
+    if (node == null)
+        return;
+    inOrder(node.left);
+    node.left = pre;
+    if (pre != null)
+        pre.right = node;
+    pre = node;
+    if (head == null)
+        head = node;
+    inOrder(node.right);
+}
+```
 
 ## 27. [字符串排序](https://www.nowcoder.com/practice/fe6b651b66ae47d7acce78ffdd9a96c7?tpId=13&tqId=11180&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+**字符串 && 排列组合 && 回溯法**
+
+```java
+public ArrayList<String> Permutation(String str) {
+    //TODO
+}
+```
+
 ## 28. [数组中出现次数超过一半的数字](https://www.nowcoder.com/practice/e8a1b01a2df14cb2b228b30ee6a92163?tpId=13&tqId=11181&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**数组**
+
+1. 摩尔投票算法：核心在于每次选择两个不相同的元素删掉，`count--` 相当于不同元素的抵消。由于存在超过半数的元素，因此抵消后，必然剩下的就是出现次数超过半数的元素
+2. 使用 `count` 来统计一个元素出现的次数，当遍历到的元素和统计的元素相等时，令 `count++`，否则 `count--`
+3. 如果前面查找到 i 个元素，且 `count == 0`，说明前 i 个元素没有 Majority，或者存在但是小于 `1/2`
+4. 剩下的 `n - i` 个元素中，Majority 的数组依然多于 `(n - i) / 2`
+
+```java
+/* 摩尔投票算法 */
+public int MoreThanHalfNum_Solution(int[] array) {
+    int majority = array[0];
+    int i;
+    int count;
+    for (i = 1, count = 1; i < array.length; i++) {
+        if (array[i] == majority) 
+            count++;
+        else 
+            count--;
+        if (count == 0) {
+            majority = array[i];
+            count = 1;
+        }
+    }
+    count = 0;
+    for (Integer item : array) {
+        if (item == majority)
+            count++;
+    }
+    return count > (array.length / 2) ? majority : 0;
+}
+/* HashTable */
+public int MoreThanHalfNum_Solution(int[] array) {
+    Hashtable<Integer, Integer> table = new Hashtable<>();
+    for (Integer item : array){
+        int count = 1;
+        if (table.containsKey(item)) {
+            count = table.get(item);
+            table.put(item, ++count);
+        } else {
+            table.put(item, count);
+        }
+        if (count > array.length / 2)
+            return item;
+        else
+            continue;
+    }
+    return 0;
+}
+```
 
 ## 29. [最小的 k 个数](https://www.nowcoder.com/practice/6a296eb82cf844ca8539b57c23e6e9bf?tpId=13&tqId=11182&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+**数组 && 栈和队列**
+
+1. 最小 K 个数，应该使用大小为 K 的小顶堆，如果直接使用小顶堆，在插入新元素后，无法删除元素使得堆仍然满足条件
+2. 维护一个大小为 K 的大顶堆，插入新元素后，如果堆大小超过 K，则删除堆顶元素，剩下的堆仍然满足当前输入数组的最小 K 个数字
+3. PriorityQueue 默认是小顶堆，应该重写 `compare` 方法来实现大顶堆
+
+```java
+public ArrayList<Integer> GetLeastNumbers_Solution(int[] input, int k) {
+    ArrayList<Integer> list = new ArrayList<Integer>();
+    if (k == 0 || k > input.length)
+        return list;
+    PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(k, (o1, o2) -> o2 - o1);
+    for (Integer item : input) {
+        maxHeap.offer(item);
+        if (maxHeap.size() > k)
+            maxHeap.poll();
+    }
+    list.addAll(maxHeap);
+    return list;
+}
+/* Tips：大顶堆 */
+PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(k, new Comparator<Integer>() {
+   @Override
+    public int compare(Integer o1, Integer o2) {
+        return o2 - o1;
+    }
+});
+/* lambda */
+PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(k, (o1, o2) -> o2 - o1);
+```
+
 ##30. [连续子数组的最大和](https://www.nowcoder.com/practice/459bd355da1549fa8a49e350bf3df484?tpId=13&tqId=11183&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**数组 && 滑动窗口**
+
+1. `sum` 记录连续数组元素的和，`res` 记录 `array[i]` 的最大和
+2. 每累加一个元素后，更新 `res` 值
+3. 如果累加一个元素后 `sum` 值为负数，则后面的累加只会让 `sum` 值更小，令此时 `sum = 0`
+
+```java
+public int FindGreatestSumOfSubArray(int[] array) {
+    int sum = 0;
+    int res = Integer.MIN_VALUE;
+    for (Integer item : array) {
+        sum += item;
+        res = Math.max(res, sum);
+        if (sum <= 0) 
+            sum = 0;
+    }
+    return res;
+}
+```
 
 ## 31. [从 1 到 n 整数中 1 出现的次数](https://www.nowcoder.com/practice/bd7f978302044eee894445e244c7eee6?tpId=13&tqId=11184&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+1. 归纳总结
+2. 如果计算百位上 1 出现的次数：百位上的数字，百位以下的数字，百位以上的数字
+3. 如果百位上的数字为 0，百位上可能出现 1 的次数由更高位决定，为高位 * 当前位
+4. 如果百位上数字为 1，百位上可能出现 1 的次数由高位和低位决定，为高位 * 当前位 + 低位 + 1
+5. 如果百位上数字大于 1，则百位上出现 1 的情况仅由更高位决定，为（高位 + 1）* 当前位
+
+```java
+/* 公式推导 */
+public int NumberOf1Between1AndN_Solution(int n) {
+    int count = 0, i = 1, high = 0, current = 0, low = 0;
+    while ((n / i) != 0) {
+        high = (n / i) % 10;
+        low = n / (i * 10);
+        current = n - (n / i) * i;
+        if (high == 0)
+            count += low * i;
+        else if (high == 1)
+            count += low * i + current + 1;
+        else
+            count += (low + 1) * i;
+        i *= 10;
+    }
+    return count;
+}
+/* 暴力解法 */
+public int NumberOf1Between1AndN_Solution(int n) {
+    int count = 0;
+    StringBuffer s = new StringBuffer();
+    for (int i = 0; i < n + 1; i++) 
+        s.append(i);
+    for (int i = 0; i < s.length(); i++) {
+        if (s.charAt(i) == '1')
+            count++;
+    }
+    return count;
+}
+```
+
 ## 32. [把数组排成最小的数](https://www.nowcoder.com/practice/8fecd3f8ba334add803bf2a06af1b993?tpId=13&tqId=11185&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**数组 && 排列组合 && 回溯法**
+
+1. 重写比较器实现自定义排序
+
+   1. 比较 S1+S2 和 S2+S1，小的排前面，重写比较器，将数组排序
+
+   2. **Collections.sort：** `o1` 小于`o2`，返回负数，升序排列；`o1` 小于`o2`，返回正数，升序排列
+
+      ```java
+      Collections.sort(List, (o1, o2) -> o1.compareTo(o2));
+      Collections.sort(List, (o1, o2) -> o2.compareTo(o1));
+      ```
+
+   3. **Arrays.sort：**`o1` 小于`o2`，返回负数，升序排列；`o1` 小于`o2`，返回正数，升序排列
+
+      ```java
+      Arrays.sort(T[], (o1, o2) -> o1.compareTo(o2));
+      Arrays.sort(T[], (o1, o2) -> o2.compareTo(o1));
+      ```
+
+2. 回溯法
+
+```java
+/* 排序比较 */
+public String PrintMinNumber(int[] numbers) {
+    String res = "";
+    if (numbers.length == 0)
+        return res;
+    int n = numbers.length;
+    String[] str = new String[n];
+    for (int i = 0; i < n; i++) {
+        str[i] = numbers[i] + "";
+    }
+    Arrays.sort(str, (o1, o2) -> (o1 + "" + 02).compareTo(o2 + "" + o1));
+    for (String item : str)
+        res += item;
+    return res;
+}
+/* 回溯法 */
+public String PrintMinNumber(int[] numbers) {
+    // TODO
+}
+```
 
 ## 33. [丑数](https://www.nowcoder.com/practice/6aa9e04fc3794f68acf8778237ba065b?tpId=13&tqId=11186&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+**动态规划**
+
+// TODO
+
 ## 34. [第一个只出现一次的字符](https://www.nowcoder.com/practice/1c82e8cf713b4bbeb2a5b31cf5b0417c?tpId=13&tqId=11187&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**字符串**
+
+1. 统计字符出现的次数
+2. 遍历字符串，如果字符出现的次数为 1，则返回字符
+
+```java
+public int FirstNotRepeatingChar(String str) {
+    if (str == null || str.length() == 0)
+        return -1;
+    HashMap<Character, Integer> map = new HashMap<>();
+    for (int i = 0; i < str.length(); i++) {
+        int val = 0;
+        if (map.containsKey(str.charAt(i))) {
+            val = map.get(str.charAt(i));
+        }
+        map.put(str.charAt(i), ++val);
+    }
+    for (int i = 0; i < str.length(); i++) {
+        if (map.get(str.charAt(i)) == 1)
+            return i;
+    }
+    return -1;
+}
+```
 
 ## 35. [数组中的逆序对](https://www.nowcoder.com/practice/96bd6684e04a44eb80e6a68efc0ec6c5?tpId=13&tqId=11188&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+// TODO
+
 ## 36. [两个链表的第一个公共节点](https://www.nowcoder.com/practice/6ab1d9a29e88450685099d45c9e31e46?tpId=13&tqId=11189&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**链表**
+
+1. 两个链表 p1 和 p2 同时走
+2. p1 走到末尾时，再从 p2 的头开始走
+3. p2 走到末尾时，再从 p1 的头开始走
+4. p1 和 p2 在链表的第一个公共节点相遇
+
+```java
+public ListNode FindFirstCommonNode(ListNode pHead1, ListNode pHead2) {
+    
+}
+```
 
 ## 37. [数字在排序数组中出现的次数](https://www.nowcoder.com/practice/70610bf967994b22bb1c26f9ae901fa2?tpId=13&tqId=11190&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
