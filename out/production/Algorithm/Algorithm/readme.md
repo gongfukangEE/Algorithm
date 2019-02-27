@@ -1352,13 +1352,11 @@ public String ReverseSentence(String str) {
         while (chars[end] != ' ' && end < chars.length - 1) {
             end++;
         }
-        if (end == chars.length - 1) {
-            reverse(chars, start, end);
-            break;
-        } else {
-            reverse(chars, start, end - 1);
+        reverse(chars, start, end - 1);
+        if (end != chars.length - 1)
             i = end + 1;
-        }
+        else
+            break;
     }
     reverse(chars, 0, chars.length - 1);
     return new String(chars);
