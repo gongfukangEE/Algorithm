@@ -1338,7 +1338,7 @@ public String LeftRotateString(String str,int n) {
 **字符串 && 递归**
 
 1. 不使用额外的空间
-2. 先反转每个单词
+2. 先反转每个单词，使用 `start` 和 `end` 来标记每个单词，`end` 走到空格时，反转 `start - end-1`；`end` 走到最后时，反转 `start - end`
 3. 再反转整个字符串
 
 ```java
@@ -1376,31 +1376,369 @@ private void swap(char[] chars, int i, int j) {
 
 ## 45. [扑克牌顺子](https://www.nowcoder.com/practice/762836f4d43d43ca9deb273b3de8e1f4?tpId=13&tqId=11198&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+**数组**
+
+1. 排序
+2. 统计大小王出现次数
+3. 大小王补有序数列
+
+```java
+public boolean isContinuous(int[] numbers) {
+    if (numbers.length < 5) 
+        return false;
+    Arrays.sort(numbers);
+    int count = 0;
+    for (int item : numbers)
+        if (item == 0)
+            count++;
+    for (int i = count; i < numbers.length - 1; i++) {
+        if (numbers[i + 1] == numbers[i])
+            return false;
+        else
+            count -= (numbers[i + 1] - numbers[i] - 1);
+    }
+    return count >= 0;
+}
+```
+
 ## 46. [圆圈中最后剩下的数](https://www.nowcoder.com/practice/f78a359491e64a50bce2d89cff857eb6?tpId=13&tqId=11199&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**数组模拟环 && 链表模拟环**
+
+1. 数组模拟链表
+   1. i 为每次可以报数的人的序号，当 i 走到进头时 i 置为 0，i 遍历所有的数组
+   2. count 为剩下未删除的人，每出去一个人 count 减 1
+   3. step 为报数的人数，step 等于 m 时，标记删除（数组置为 -1）和重置
+2. 链表模拟环
+   1. count 从 0 开始计数，没间隔 m - 1 删除一个元素
+   2. `count = (count + m -1) % list.size()` 模拟环，记录下一个 m - 1 元素在当前链表的位置
+
+```java
+/* 数组 */
+public int LastRemaining_Solution(int n, int m) {
+    if (n == 0 || m == 0)
+        return -1;
+    int[] arr = new int[n];
+    int i = -1, count = n, step = 0;
+    while(count > 0) {
+        if (++i = n)
+            i = 0;
+        if (arr[i] == -1)
+            continue;
+        if (++step == m) {
+            arr[i] = -1;
+            step = 0;
+            --count;
+        }
+    }
+    return i;
+}
+/* 链表 */
+public int LastRemaining_Solution(int n, int m) {
+    if (n < 1 || m < 1)
+        return -1;
+    ArrayList<Integer> list = new ArrayList<Integer>();
+    for (int i = 0; i < n; i++)
+        list.add(i);
+    int count = 0;
+    while (list.size() > 1) {
+        count = (count + m - 1) % list.size();
+        list.remove(count);
+    }
+    return list.size() == 1 ? list.get(0) : -1;
+}
+```
 
 ## 47. [1+2+3+...+n](https://www.nowcoder.com/practice/7a0da8fc483247ff8800059e12d7caf1?tpId=13&tqId=11200&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+**递归**
+
+1. `&&` 具有短路原则，即在第一个条件语句为 false 的情况下不会去执行第二个条件语句
+2. 递归终止条件取非作为 `&&` 的第一个语句，递归的主体转换作为第二个条件语句
+3. 当递归的返回条件为 true 的情况下就不会执行递归的主体部分，递归返回
+
+```java
+public int Sum_Solution(int n) {
+    int sum = n;
+    boolean b = (n > 0) && ((sum += Sum_Solution(n - 1)) > 0);
+    return sum;
+}
+```
+
 ## 48. [不用加减乘除做加法](https://www.nowcoder.com/practice/59ac416b4b944300b617d4f7f111b215?tpId=13&tqId=11201&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**位运算**
+
+```java
+public int Add(int num1, int num2) {
+    return num2 == 0 ? num1 : Add(num1 ^ num2, (num1 & num2) << 1);
+}
+```
 
 ## 49. [字符串转换成整数](https://www.nowcoder.com/practice/1277c681251b4372bdef344468e4f26e?tpId=13&tqId=11202&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+**字符串**
+
+```java
+public int StrToInt(String str) {
+    if (str == null || str.length() == 0)
+        return 0;
+    int ret = 0;
+    for (int i = 0; i < str.length(); i++) {
+        char c = str.charAt(i);
+        if (i == 0 && (c == '-' || c == '+'))
+            continue;
+        if (c < '0' || c > '9')
+            return 0;
+        ret = ret * 10 + (c - '0');
+    }
+    return str.charAt(0) == '-' ? -ret : ret;
+}
+```
+
 ## 50. [数组中重复的数字](https://www.nowcoder.com/practice/623a5ac0ea5b4e5f95552655361ae0a8?tpId=13&tqId=11203&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**数组**
+
+1. HashSet
+
+2. 辅助数组记录
+
+   1. 新开一个长为 length 的数组 arr，遍历 numbers，将数组中的数字作为索引在 arr 中实时统计数字出现的次数
+   2. 如果出现的次数等于 2，则表示此数字重复
+
+3. 调整交换位置
+
+   1. O(N) + O(1)
+
+   2. 将值为 i 的元素调整到第 i 个位置上，若该位置有数字，则说明重复
+
+      ```java
+      [0]: 2 3 1 0 2 5 3
+      [1]: 1 3 2 0 2 5 3	// 2->[2]
+      [2]: 1 0 2 3 2 5 3	// 3->[3]
+      [3]: 1 0 2 3 2 5 3	// 2==[2]
+      [4]: 1 0 2 3 2 5 3	// 3==[3]
+      [5]: 1 0 2 3 2 5 3	// 2->[2]X，2 重复
+      ```
+
+```java
+/* HashSet */
+public boolean duplicate(int[] numbers,int length,int [] duplication) {
+    HashSet<Integer> set = new HashSet<>();
+    for (int i = 0; i < length; i++) {
+        if(set.add(numbers[i]))
+            continue;
+        else {
+            duplication[0] = numbers[i];
+            return true;
+        }
+    }
+    return false;
+}
+/* 辅助数组 */
+public boolean duplicate(int[] numbers,int length,int[] duplication) {
+    if (numbers == null || numbers.length == 0)
+        return false;
+    int[] arr = new int[length];
+    duplication[0] = -1;
+    for (int i = 0; i < length; i++) {
+        if (++arr[numbers[i]] == 2) {
+            duplication[0] = numbers[i];
+            break;
+        }
+    }
+    return duplication[0] != -1;
+}
+/* 调整交换 */
+public boolean duplicate(int[] numbers,int length,int[] duplication) {
+    if (numbers == null || numbers.length == 0)
+        return false;
+    int i = 0;
+    while (numbers[i] != i && i < length) {
+        if (numbers[i] == numbers[numbers[i]]) {
+            duplication[0] = numbers[i];
+            return true;
+        }
+        swap(numbers, i, numbers[i]);
+    }
+    return false;
+}
+private void swap(int[] arr, int i, int j) {
+    int t = arr[i];
+    arr[i] = arr[j];
+    arr[j] = t;
+}
+```
 
 ## 51. [构建乘积数组](https://www.nowcoder.com/practice/94a4d381a68b47b7a8bed86f2975db46?tpId=13&tqId=11204&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+**数组**
+
+1. 不包含 A[i]
+2. 从左向右累乘，从右向左累乘
+
+```java
+public int[] multiply(int[] A) {
+    int n = A.lenght;
+    int[] B = new int[n];
+    for (int i = 0, product = 1; i < n; product *= A[i], i++)
+        B[i] = product;
+    for (int i = n -1, product = 1; i >= 0; product *= A[i], i--)
+        B[i] *= product;
+    return B;
+}
+```
+
 ## 52. [正则表达式匹配](https://www.nowcoder.com/practice/45327ae22b7b413ea21df13ee7d6429c?tpId=13&tqId=11205&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+//TODO
 
 ## 53. [表示数值的字符串](https://www.nowcoder.com/practice/6f8c901d091949a5837e24bb82a731f2?tpId=13&tqId=11206&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+**正则表达式**
+
+1. `()`标记一个子表达式的开始和结束位置，分组
+2. `*` 匹配前面的子表达式零次或者多次
+3. `+` 匹配前面的子表达式一次或者多次
+4. `?` 匹配前面的子表达式零次或者一次
+5. `[]` 字符集合
+6. `\\.` 转义后
+7. `\\d` 数字
+
+```java
+public boolean isNumeric(char[] str) {
+    if (str == null || str.length == 0) {
+        return false;
+    }
+    return new String(str).matches("[+-]?\\d*(\\.\\d+)?([eE][+-]?\\d+)?");
+}
+```
+
 ## 54. [字符流中第一个不重复的字符](https://www.nowcoder.com/practice/00de97733b8e4f97a3fb5c680ee10720?tpId=13&tqId=11207&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**字符串 && 栈和队列**
+
+1. int[256] 标记字符出现的次数
+2. Queue 将输入流的字符入队
+3. 当队头元素出现重复时，一直出队，直到队头元素不重复
+4. 队列为空，无不重复字符；队列不为空，输出队头
+
+```java
+private Queue<Character> queue = new LinkedList<Character>();
+int[] arr = new int[256]; 
+public void Insert(char ch) {
+    ++arr[ch];
+    queue.add(ch);
+    while (!queue.isEmpty() && arr[queue.peek()] > 1) {
+        queue.remove();
+    }
+}
+public char FirstAppearingOnce() {
+    return queue.isEmpty() ? '#' : queue.peek();
+}
+```
 
 ## 55. [链表中环的入口节点](https://www.nowcoder.com/practice/253d2c59ec3e4bc68da16833f79a38e4?tpId=13&tqId=11208&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+**快慢指针**
+
+1. fast 指针一次 2 个节点，slow 指针一次 1 个节点
+
+2. 链表环前面部分为 x， fast 与 slow 相遇在 z，x 与 z 之间的是 y
+
+3. 由于 fast 是 slow 的两倍，则 fast 走过一圈半，slow 走不到一圈相遇
+
+4. fast 走过：x+y+z+y；slow 走过的 x+y
+
+5. x+y+z+y = 2(x+y)  => x=z
+
+6. 相遇后，slow 接着走，fast 从头开始走，两者在环入口处再次相遇
+
+   ```java
+   1->2->3->4->5->6->4	: 4 为环的第一个节点，假设快慢指针在 4 相遇
+   x: {1,2,3}  z: {4,5,6}  y:{4}
+   ```
+
+```java
+public ListNode EntryNodeOfLoop(ListNode pHead) {
+    if (pHead == null || pHead.next == null)
+        return null;
+    ListNode fast = pHead;
+    ListNode slow = pHead;
+    do {
+        fast = fast.next.next;
+        slow = slow.next;
+    }while (fast != slow)
+        fast = pHead;
+    while (fast != slow) {
+        fast = fast.next;
+        slow = slow.next;
+    }
+    return fast;
+}
+```
+
 ## 56. [删除链表的重复节点](https://www.nowcoder.com/practice/fc533c45b73a41b0b44ccba763f866ef?tpId=13&tqId=11209&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**链表 && 递归 && 双指针**
+
+1. 递归
+   1. 0 || 1 个节点，直接返回
+   2. 当前节点重复节点，while 删除，然后从第一个与当前节点不同的节点开始递归
+   3. 当前节点不是重复节点，保留节点递归
+2. 快慢指针
+   1. 新建一个 `newHead.next = pHead`
+   2. 快指针 `fast = pHead`，慢指针 `slow = newHead`
+   3. 首先判断 `fast != null && fast.next != null`，满足条件进入循环
+   4. 如果当前节点不重复，`fast` 和 `slow` 依次向前平移
+   5. 如果当前节点重复，即 `fast.val = fast.next.val`，记录 `value = fast.val`，与 `value` 相等的节点，全部删除，再移动 `slow`
+
+```java
+/* 快慢指针 */
+public ListNode deleteDuplication(ListNode pHead) {
+    ListNode newHead = new ListNode(-1);
+    newHead.next = pHead;
+    ListNode slow = newHead;
+    ListNode fast = pHead;
+    while(fast != null && fast.next != null) {
+        if (fast.val == fast.next.val) {
+            int value = fast.val;
+            while(fast != null && fast.val == value) 
+                fast = fast.next;
+            slow.next = fast;
+        } else {
+            slow = fast;
+            fast = fast.next;
+        }
+    }
+    return newHead.next;
+}
+/* 递归 */
+public ListNode deleteDuplication(ListNode pHead) {
+    if (pHead == null || pHead.next == null)
+        return pHead;
+    if（pHead.val == pHead.next.val） {
+        ListNode node = pHead.next;
+        while(node != null && pHead.val == node.val)
+            node = node.next;
+        return deleteDuplication(pHead.next);
+    } else {
+        pHead.next = deleteDuplication(pHead.next);
+        return pHead;
+    }
+}
+```
 
 ## 57. [二叉树的下一个节点](https://www.nowcoder.com/practice/9023a0c988684a53960365b889ceaf5e?tpId=13&tqId=11210&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
 ## 58. [对称二叉树](https://www.nowcoder.com/practice/ff05d44dfdb04e1d83bdbdab320efbcb?tpId=13&tqId=11211&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+```java
+boolean isSymmetrical(TreeNode pRoot) {
+    
+}
+```
 
 ## 59. [之字形打印二叉树](https://www.nowcoder.com/practice/91b69814117f4e8097390d107d2efbe0?tpId=13&tqId=11212&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 

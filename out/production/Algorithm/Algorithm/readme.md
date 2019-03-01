@@ -1338,7 +1338,7 @@ public String LeftRotateString(String str,int n) {
 **字符串 && 递归**
 
 1. 不使用额外的空间
-2. 先反转每个单词
+2. 先反转每个单词，使用 `start` 和 `end` 来标记每个单词，`end` 走到空格时，反转 `start - end-1`；`end` 走到最后时，反转 `start - end`
 3. 再反转整个字符串
 
 ```java
@@ -1352,11 +1352,13 @@ public String ReverseSentence(String str) {
         while (chars[end] != ' ' && end < chars.length - 1) {
             end++;
         }
-        reverse(chars, start, end - 1);
-        if (end != chars.length - 1)
-            i = end + 1;
-        else
+        if (end == chars.length - 1) {
+            reverse(chars, start, end);
             break;
+        } else {
+            reverse(chars, start, end - 1);
+            i = end + 1;
+        }
     }
     reverse(chars, 0, chars.length - 1);
     return new String(chars);
@@ -1374,11 +1376,68 @@ private void swap(char[] chars, int i, int j) {
 
 ## 45. [扑克牌顺子](https://www.nowcoder.com/practice/762836f4d43d43ca9deb273b3de8e1f4?tpId=13&tqId=11198&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+**数组**
+
+1. 排序
+2. 统计大小王出现次数
+3. 大小王补有序数列
+
+```java
+public boolean isContinuous(int[] numbers) {
+    if (numbers.length < 5) 
+        return false;
+    Arrays.sort(numbers);
+    int count = 0;
+    for (int item : numbers)
+        if (item == 0)
+            count++;
+    for (int i = count; i < numbers.length - 1; i++) {
+        if (numbers[i + 1] == numbers[i])
+            return false;
+        else
+            count -= (numbers[i + 1] - numbers[i] - 1);
+    }
+    return count >= 0;
+}
+```
+
 ## 46. [圆圈中最后剩下的数](https://www.nowcoder.com/practice/f78a359491e64a50bce2d89cff857eb6?tpId=13&tqId=11199&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**数组模拟环 && 链表模拟环**
+
+1. 数组模拟链表
+   1. i 为每次可以报数的人的序号，当 i 走到进头时 i 置为 0，i 遍历所有的数组
+
+```java
+public int LastRemaining_Solution(int n, int m) {
+}
+```
 
 ## 47. [1+2+3+...+n](https://www.nowcoder.com/practice/7a0da8fc483247ff8800059e12d7caf1?tpId=13&tqId=11200&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+**递归**
+
+1. `&&` 具有短路原则，即在第一个条件语句为 false 的情况下不会去执行第二个条件语句
+2. 递归终止条件取非作为 `&&` 的第一个语句，递归的主体转换作为第二个条件语句
+3. 当递归的返回条件为 true 的情况下就不会执行递归的主体部分，递归返回
+
+```java
+public int Sum_Solution(int n) {
+    int sum = n;
+    boolean b = (n > 0) && ((sum += Sum_Solution(n - 1)) > 0);
+    return sum;
+}
+```
+
 ## 48. [不用加减乘除做加法](https://www.nowcoder.com/practice/59ac416b4b944300b617d4f7f111b215?tpId=13&tqId=11201&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**位运算**
+
+```java
+public int Add(int num1, int num2) {
+    return num2 == 0 ? num1 : Add(num1 ^ num2, (num1 & num2) << 1);
+}
+```
 
 ## 49. [字符串转换成整数](https://www.nowcoder.com/practice/1277c681251b4372bdef344468e4f26e?tpId=13&tqId=11202&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 

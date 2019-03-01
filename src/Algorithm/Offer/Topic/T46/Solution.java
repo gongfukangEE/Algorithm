@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Solution {
 
     public static void main(String[] args) {
-        System.out.println(new Solution().LastRemaining_Solution_I(5, 3));
+        System.out.println(new Solution().LastRemaining_Solution(5, 3));
     }
 
     /**
@@ -36,7 +36,7 @@ public class Solution {
     /**
      * 数组模拟链表
      * 1. i 为每次可以报数的人序号，当i=n时，i=0来模拟环，i 所有人都走
-     * 2. count 为人总数，每出去一个，count--，且数组值置 1
+     * 2. count 为人总数，每出去一个，count--，且数组值置 -1
      * 3. step 为报的数，step=m时，标记出去的人&重置，step 只走可以报数的人
      */
     public int LastRemaining_Solution_I(int n, int m) {

@@ -45,4 +45,23 @@ public class Solution {
             return pHead;
         }
     }
+
+    public ListNode deleteDuplication_I(ListNode pHead) {
+        ListNode newHead = new ListNode(-1);
+        newHead.next = pHead;
+        ListNode slow = newHead;
+        ListNode fast = pHead;
+        while(fast != null && fast.next != null) {
+            if (fast.val == fast.next.val) {
+                int value = fast.val;
+                while(fast != null && fast.val == value)
+                    fast = fast.next;
+                slow.next = fast;
+            } else {
+                slow = fast;
+                fast = fast.next;
+            }
+        }
+        return newHead.next;
+    }
 }
