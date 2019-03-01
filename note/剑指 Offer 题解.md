@@ -1,5 +1,3 @@
-# 剑指 Offer 和 LeetCode 题解
-
 [TOC]
 
 # 剑指 Offer
