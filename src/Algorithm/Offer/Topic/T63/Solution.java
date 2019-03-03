@@ -28,12 +28,7 @@ public class Solution {
      *     奇数进入小顶堆，返回中位数为 minHeap.peek()
      */
     private PriorityQueue<Integer> minHeap = new PriorityQueue<>();
-    private PriorityQueue<Integer> maxHeap = new PriorityQueue<>(new Comparator<Integer>() {
-        @Override
-        public int compare(Integer o1, Integer o2) {
-            return o2 - o1;
-        }
-    });
+    private PriorityQueue<Integer> maxHeap = new PriorityQueue<>((o1, o2) -> o2 - o1);
     private int count = 0;
 
     public void Insert(Integer num) {

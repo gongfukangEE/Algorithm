@@ -1730,31 +1730,377 @@ public ListNode deleteDuplication(ListNode pHead) {
 
 ## 57. [二叉树的下一个节点](https://www.nowcoder.com/practice/9023a0c988684a53960365b889ceaf5e?tpId=13&tqId=11210&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+**二叉树**
+
+1. 中序遍历中下一个节点出现的情况
+2. 当前节点为叶节点
+   1. 如果为 **root** 节点，直接返回 **null**
+   2. 如果当前节点在**左叶子**节点，出现在**父节点**
+   3. 如果当前节点在**右叶子**节点，向上遍历父节点，直到**父节点为左节点**
+3. 当前节点围殴 root 节点
+   1. **右节点存在**，沿着**右节点的左节点**一直寻找，直到**叶子节点**
+   2. **右节点不存在**，向上遍历父节点，直到**父节点为左节点**
+4. 总结
+   1. 右子树不为空时，沿着右子树的左节点一直寻找，直到找到叶子节点
+   2. 右子树为空时，向上遍历父节点，直到父节点为左节点，输出父节点
+
+```java
+public TreeLinkNode GetNext(TreeLinkedNode pNode) {
+    if (pNode.right == null) {
+        while(pNode.next != null) {
+            if (pNode.next.left == pNode)
+                return pNode.next;
+            else
+                pNode = pNode.next;
+        }
+    } else {
+        TreeLinkNode node = pNode.right;
+        while(node.left != null)
+            node = node.left;
+        return node;
+    }
+    return null;
+}
+```
+
 ## 58. [对称二叉树](https://www.nowcoder.com/practice/ff05d44dfdb04e1d83bdbdab320efbcb?tpId=13&tqId=11211&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**二叉树 && 递归**
+
+1. pRoot 的左子树 left 和右子树 right
+2. left 的右子树 == right 的左子树 && left 的左子树 == right 的右子树，不断递归
+3. 递归终止条件：左右子树均为空，返回 true；其他均返回 false
 
 ```java
 boolean isSymmetrical(TreeNode pRoot) {
-    
+    if (pRoot == null || (pRoot.left == null && pRoot.right == null))
+        return true;
+    return doIsSymmetrical(pRoot.left, pRoot.right);
+}
+private boolean doIsSymmetrical(TreeNode left, TreeNode right) {
+    if (left == null && right == null)
+        return true;
+    if (left != null && right != null && left.val == right.val)
+        return doIsSymmetrical(left.left, right.right) 
+        && doIsSymmetrical(left.right, right.left);
+    return false;
 }
 ```
 
 ## 59. [之字形打印二叉树](https://www.nowcoder.com/practice/91b69814117f4e8097390d107d2efbe0?tpId=13&tqId=11212&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+**二叉树 && 栈和队列**
+
+1. 利用 `Queue` 进行层序遍历
+2. 奇数行`List` 直接添加到 `resList`
+3. 偶数行 `List` 反转后再添加到 `resList`
+4. Tips:
+   1. `list == null` 理解为没有为 `list` 分配空间
+   2. `list.size() == 0` 理解为为 `list` 分配了空间，但是 `list` 中没有元素
+
+```java
+public ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
+    ArrayList<ArrayList<Integer>> resList = new ArrayList<>();
+    Queue<TreeNode> queue = new LinkedList<>();
+    if (pRoot == null)
+        return resList;
+    queue.offer(pRoot);
+    int count = 1;
+    int size = 0;
+    while(!queue.isEmpty()){
+        ArrayList<Integer> list = new ArrayList<>();
+        size = queue.size();
+        while(size-- > 0) {
+            TreeNode node = queue.remove();
+            if (node == null)
+                continue;
+            list.add(node.val);
+            queue.offer(node.left);
+            queue.offer(node.right);
+        }
+        if (count % 2 == 0)
+            Collections.reverse(list);
+        if (list.size() != 0)
+            resList.add(list);
+        count++;
+    }
+    return resList;
+}
+```
+
 ## 60. [二叉树打印成多行](https://www.nowcoder.com/practice/445c44d982d04483b04a54f298796288?tpId=13&tqId=11213&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**二叉树 && 栈和队列**
+
+```java
+public ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
+    ArrayList<ArrayList<Integer>> resList = new ArrayList<>();
+    Queue<TreeNode> queue = new LinkedList<>();
+    if (pRoot == null)
+        return resList;
+    queue.add(pRoot);
+    while(!queue.isEmpty()){
+        ArrayList<Integer> list = new ArrayList<>();
+        int size = queue.size();
+        while(size-- > 0) {
+            TreeNode node = queue.remove();
+            if (node == null)
+                continue;
+           	list.add(node.val);
+            queue.add(node.left);
+            queue.add(node.right);
+        }
+        if (list.size() != 0) 
+            resList.add(list);
+    }
+    return resList;
+}
+```
 
 ## 61. [序列化二叉树](https://www.nowcoder.com/practice/cf7e25aa97c04cc1a68c8f040e71fb84?tpId=13&tqId=11214&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+**二叉树 && 递归 && 字符串**
+
+1. 序列化：二叉树前序遍历，遇到 `Null` 补上 `#`，数字之间用 `!` 分割
+2. 反序列化
+   1. 将序列化后得到的字符串直接分割成字符数组
+   2. 全局变量 index 用于在数组索引
+   3. 如果 index 指向的索引为 `#`，则返回 `NULL`，否则按照前序遍历重建二叉树
+3. Tips：`substring(int beginIndex, int endIndex)` 返回字符串的字串
+
+```java
+private StringBuffer stringbuffer = new StringBuffer();
+public String Serialize(TreeNode root) {
+    preOrder(root);
+    return stringbuffer.toString();
+}
+private void preOrder(TreeNode node) {
+    if (node == null)
+        stringbuffer.append("#").append("!");
+    else {
+        stringbuffer.append(node.val).append("!");
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+}
+private int index = -1;
+public TreeNode Deserialize(String str) {
+    return Deserialize(str.split("!"));
+}
+private TreeNode Deserialize(String[] dStr) {
+    index++;
+    if (dStr[index].equals("#")){
+        return null;
+    } else {
+        TreeNode node = new TreeNode(Integer.valueOf(dStr[index]));
+        node.left = Deserialize(dStr);
+        node.right = Deserialize(dStr);
+        return node;
+    }
+}
+```
+
 ## 62. [二叉搜索树的第 K 个节点](https://www.nowcoder.com/practice/ef068f602dde4d28aab2b210e859150a?tpId=13&tqId=11215&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**二叉树中序非递归遍历**
+
+1. 二叉树的中序遍历是有序数组，中序遍历后找到第 K 个数
+   1. 节点不为空，沿着左子树一直压栈，直到节点为空
+   2. 节点为空，则出栈（出栈值为从小到大），沿着出栈节点的右子树走一步
+   3. 栈为空，节点为空，则结束循环
+
+```java
+public TreeNode KthNode(TreeNode pRoot, int k) {
+    if (pRoot == null || k == 0)
+        return null;
+    Stack<TreeNode> stack = new Stack<TreeNode>();
+    TreeNode node = pRoot;
+    do {
+        if (node != null){
+            stack.push(node);
+            node  = node.left;
+        } else {
+            node = stack.pop();
+            if (--k == 0)
+                return node;
+            node = node.right;
+        }
+    } while(node != null || !stack.isEmpty());
+    return null;
+}
+```
 
 ## 63. [数据流中位数](https://www.nowcoder.com/practice/9be0172896bd43948f8a32fb954e1be1?tpId=13&tqId=11216&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+**数组 && 栈和队列**
+
+1. 小顶堆存储右边元素，大顶堆存储左边元素，并且大顶堆的堆顶小于小顶堆的堆顶
+2. 分为奇数和偶数
+3. 偶数：新加入的元素进入大顶堆，筛选出最大的元素进入小顶堆，返回 `minHeap.peek() + maxHeap.peek() / 2`
+4. 奇数：新加入的元素进入小顶堆，筛选出最小的元素进入大顶堆，返回 `minHeap.peek()`
+
+```java
+private PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>();
+private PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>((o1, o2) -> o2 - o1);
+private int count = 0;
+public void Insert(Integer num) {
+    if (count % 2 != 0){
+        minHeap.add(num);
+        maxHeap.add(minHeap.remove());
+    } else {
+        maxHeap.add(num);
+        minHeap.add(maxHeap.remove());
+    }
+    ++count;
+}
+public Double GetMedian() {
+    if (count % 2 != 0)
+        return (double)minHeap.peek();
+    else
+        return (double)(maxHeap.peek() + minHeap.peek()) / 2;
+}
+```
+
 ## 64. [滑动窗口的最大值](https://www.nowcoder.com/practice/1624bc35a45c42c0bc17d17fa0cba788?tpId=13&tqId=11217&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**滑动窗口 && 堆**
+
+1. 维护一个大小为 size 的大顶堆
+2. 窗口滑动一次：左边元素移除堆，右边元素加入堆
+3. 返回堆顶
+
+```java
+public ArrayList<Integer> maxInWindows(int[] num, int size){
+    ArrayList<Integer> list = new ArrayList<Integer>();
+    if (num == null || num.length == 0 || size == 0)
+        return list;
+    PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>((o1, o2) -> o2 - o1);
+    for (int i = 0; i < size; i++){
+        if (i > num.length - 1) 
+            return list;
+        maxHeap.add(num[i]);
+    }
+    list.add(maxHeap.peek());
+    int start = 0, end = size - 1;
+    while(end < num.length - 1) {
+        end++;
+        maxHeap.add(num[end]);
+        maxHeap.remove(new Integer(num[start]));
+        list.add(maxHeap.peek());
+        start++;
+    }
+    return list;
+}
+```
 
 ## 65. [矩阵中的路径](https://www.nowcoder.com/practice/c61c6999eecb4b8f88a98f66b273a3cc?tpId=13&tqId=11218&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+**回溯法 && 深度优先搜索**
+
+1. `index` 用于索引字符数组中的字符，当 `index` 走到字符数组末尾，则完全匹配成功
+2. 递归终止条件：四个边界条件，超出边界返回 false
+3. 递归主体：字符未被标记 && 上下左右四个方向，索引前移一个 `index + 1`
+4. 递归结束：字符重置为未标记
+
+```java
+private int rows;
+private int cols;
+private boolean[][] mark;
+private char[] str;
+private final static int[][] next = {{0, -1}, {0, 1}, {-1, 0}, {1, 0}};
+public boolean hasPath(char[] matrix, int rows, int cols, char[] str) {
+    this.rows = rows;
+    this.cols = cols;
+    this.str = str;
+    char[][] wordMatrix = buildMatrix(matrix);
+    this.mark = new boolean[rows][cols];
+    for (int i = 0; i < rows; i++)
+        for (int j = 0; j < cols; j++)
+            if (dfs(wordMatrix,i, j, 0))
+                return true;
+    return false;
+}
+private boolean dfs(char[][] wordMatrix,int row, int col, int index) {
+    if (str.length == index)
+        return true;
+    if (row < 0 || col < 0 || row >= wordMatrix.length || col >= wordMatrix[0].length) {
+        return false;
+    }
+    char ch = str[index];
+    if (!mark[row][col] && ch == wordMatrix[row][col]) {
+        mark[row][col] = true;
+        for (int[] item : next)
+            if (dfs(wordMatrix,row + item[0], col + item[1], index + 1))
+                return true;
+        mark[row][col] = false;
+        return false;
+    }
+    return false;
+}
+private char[][] buildMatrix(char[] matrix) {
+    char[][] wordMatrix = new char[rows][cols];
+    int index = -1;
+    for (int i = 0; i < rows; i++)
+        for (int j = 0; j < cols; j++)
+            wordMatrix[i][j] = matrix[++index];
+    return wordMatrix;
+}
+```
+
 ## 66. [机器人的运动范围](https://www.nowcoder.com/practice/6e5207314b5241fb83f2329e89fdecc8?tpId=13&tqId=11219&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-# LeetCode
+**深度优先搜索**
+
+1. 首先建立机器人运动数组，在建立数组的同时计算出每个方格坐标对应的数字之和
+2. 递归终止条件：
+   1. 四个边界 && 当前位置被标记 
+   2. 先标记当前位置，再判断条件，不符合直接返回
+3. 满足条件累加计数，然后四个方向分别递归
+
+```java
+private int count = 0;
+boolean[][] mark;
+private int rows;
+private int cols;
+private int threshold;
+private final static int[][] next = {{0, -1}, {0, 1}, {-1, 0}, {1, 0}};
+public int movingCount(int threshold, int rows, int cols) {
+    int[][] matrix = buildSumMatrix(rows, cols);
+    this.rows = rows;
+    this.cols = cols;
+    this.mark = new boolean[rows][cols];
+    this.threshold = threshold;
+    dfs(matrix, 0, 0);
+    return count;
+}
+private void dfs(int[][] matrix, int row, int col) {
+    if (row < 0 || col < 0 || row >= rows || col >= cols || mark[row][col])
+        return;
+    mark[row][col] = true;
+    if (matrix[row][col] > threshold)
+        return;
+    count++;
+    for (int[] item : next)
+        dfs(matrix, row + item[0], col + item[1]);
+}
+private int[][] buildSumMatrix(int rows, int cols) {
+    int[] sumOne = new int[Math.max(rows, cols)];
+    for (int i = 0; i < sumOne.length; i++) {
+        int t = i;
+        while (t > 0) {
+            sumOne[i] += t % 10;
+            t /= 10;
+        }
+    }
+    int[][] sumMatrix = new int[rows][cols];
+    for (int i = 0; i < rows; i++)
+        for (int j = 0; j < cols; j++)
+            sumMatrix[i][j] = sumOne[i] + sumOne[j];
+    return sumMatrix;
+}
+```
+
+
 
 
 
