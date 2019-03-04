@@ -12,11 +12,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T65/Solution.java">
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T52/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+            <state relative-caret-position="-108">
+              <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T35/Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solution_II.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T52/Solution_II.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -77,9 +97,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Algorithm/Offer/T56/Solution.java" />
-        <option value="$PROJECT_DIR$/src/Algorithm/Offer/T57/Solution.java" />
-        <option value="$PROJECT_DIR$/src/Algorithm/Offer/T58/Solution.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/Offer/T59.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/Offer/T59/T59.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/Offer/T60/Solution.java" />
@@ -94,9 +111,7 @@
         <option value="$PROJECT_DIR$/src/Algorithm/Offer/T23/Solution.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/Offer/T24/Solution.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/Offer/Topic/T26/Solution.java" />
-        <option value="$PROJECT_DIR$/src/Algorithm/Offer/Topic/T35/Solution.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/Offer/Topic/T49/Solution.java" />
-        <option value="$PROJECT_DIR$/src/Algorithm/Offer/Topic/T52/Solution.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/commons/TreeLinkNode.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/Offer/Topic/T57/Solution.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/Offer/Topic/T60/Solution.java" />
@@ -128,6 +143,11 @@
         <option value="$PROJECT_DIR$/src/Algorithm/Offer/Topic/T63/Solution.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/Offer/Topic/T66/Solution.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/Offer/Topic/T65/Solution.java" />
+        <option value="$PROJECT_DIR$/src/Algorithm/Offer/Topic/T27/Solution_II.java" />
+        <option value="$PROJECT_DIR$/src/Algorithm/Offer/Topic/T27/Solution.java" />
+        <option value="$PROJECT_DIR$/src/Algorithm/Offer/Topic/T52/Solution_II.java" />
+        <option value="$PROJECT_DIR$/src/Algorithm/Offer/Topic/T52/Solution.java" />
+        <option value="$PROJECT_DIR$/src/Algorithm/Offer/Topic/T35/Solution.java" />
       </list>
     </option>
   </component>
@@ -145,8 +165,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2428" />
-    <option name="y" value="-8" />
+    <option name="x" value="388" />
+    <option name="y" value="101" />
     <option name="width" value="929" />
     <option name="height" value="900" />
   </component>
@@ -168,7 +188,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -200,14 +220,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -215,7 +227,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T10" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -224,7 +235,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T11" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -233,7 +243,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T12" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -242,7 +251,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T13" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -251,7 +259,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T14" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -260,7 +267,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T15" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -269,7 +275,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T16" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -278,7 +283,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T17" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -287,7 +291,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T18" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -296,7 +299,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T19" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -305,7 +307,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T20" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -314,7 +315,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T21" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -323,7 +323,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T22" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -332,7 +331,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T23" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -341,7 +339,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T24" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -350,7 +347,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T25" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -359,7 +355,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T26" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -368,7 +363,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T27" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -377,7 +371,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T28" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -386,7 +379,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T29" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -395,7 +387,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T30" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -404,7 +395,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T31" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -413,7 +403,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T32" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -422,7 +411,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T33" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -431,7 +419,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T34" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -440,7 +427,14 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
+              <item name="Topic" type="462c0819:PsiDirectoryNode" />
+              <item name="T35" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T36" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -449,7 +443,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T37" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -458,7 +451,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T38" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -467,7 +459,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T39" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -476,7 +467,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T40" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -485,7 +475,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T41" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -494,7 +483,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T42" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -503,7 +491,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T43" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -512,7 +499,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T44" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -521,7 +507,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T45" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -530,7 +515,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T46" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -539,7 +523,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T47" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -548,7 +531,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T48" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -557,7 +539,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T49" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -566,7 +547,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T50" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -575,7 +555,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T51" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -584,7 +563,14 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
+              <item name="Topic" type="462c0819:PsiDirectoryNode" />
+              <item name="T52" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T53" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -593,7 +579,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T54" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -602,7 +587,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T55" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -611,7 +595,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T56" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -620,7 +603,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T57" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -629,7 +611,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T58" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -638,7 +619,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T59" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -647,7 +627,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T61" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -656,7 +635,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T62" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -665,7 +643,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T63" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -674,7 +651,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T64" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -683,7 +659,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T65" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -692,7 +667,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
               <item name="Topic" type="462c0819:PsiDirectoryNode" />
               <item name="T66" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -700,8 +674,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -736,32 +710,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Solution (1)">
+  <component name="RunManager" selected="Application.Solution (2)">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
-    </configuration>
-    <configuration name="PathApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="DataStructures.GraphW.PATH.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="DataStructures.GraphW.PATH.PathApp" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Algorithm" />
-      <envs />
     </configuration>
     <configuration name="Solution (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -785,11 +740,11 @@
     <configuration name="Solution (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Algorithm.Offer.Topic.T66.*" />
+          <option name="PATTERN" value="Algorithm.Offer.Topic.T35.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Algorithm.Offer.Topic.T66.Solution" />
+      <option name="MAIN_CLASS_NAME" value="Algorithm.Offer.Topic.T35.Solution" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -820,14 +775,14 @@
       <module name="Algorithm" />
       <envs />
     </configuration>
-    <configuration name="T (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Solution_II" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Algorithm.Offer.Topic.T45.*" />
+          <option name="PATTERN" value="Algorithm.Offer.Topic.T52.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Algorithm.Offer.Topic.T45.T" />
+      <option name="MAIN_CLASS_NAME" value="Algorithm.Offer.Topic.T52.Solution_II" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -947,19 +902,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.T (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Application.T (2)" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Solution" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Solution (1)" />
+      <item index="0" class="java.lang.String" itemvalue="Application.T (2)" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Solution" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Solution (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Solution_II" />
       <item index="4" class="java.lang.String" itemvalue="Application.Solution (2)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Solution (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Solution (2)" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Solution" />
-        <item index="3" class="java.lang.String" itemvalue="Application.T (2)" />
-        <item index="4" class="java.lang.String" itemvalue="Application.T (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Solution (2)" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Solution_II" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Solution (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Solution" />
+        <item index="4" class="java.lang.String" itemvalue="Application.T (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -991,12 +946,13 @@
       <workItem from="1547562848841" duration="150962000" />
       <workItem from="1550906941110" duration="63196000" />
       <workItem from="1551258821987" duration="21057000" />
-      <workItem from="1551492303250" duration="16843000" />
+      <workItem from="1551492303250" duration="18758000" />
+      <workItem from="1551624385300" duration="11953000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="456653000" />
+    <option name="totallyTimeSpent" value="470521000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1008,7 +964,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1974" y="-8" width="1394" height="916" extended-state="6" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1020,12 +976,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947367" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Redis Servers" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991013" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947367" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17831074" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947367" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13418292" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10584344" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947367" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1033,8 +989,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16892597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26173097" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1107,7 +1063,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="139" />
+      <option name="time" value="140" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1117,6 +1073,11 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>dp[0]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>array[5]</expression-string>
         <language-id>JAVA</language-id>
@@ -1155,52 +1116,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T27/Solution_II.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T27/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="670">
-          <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T28/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-342">
-          <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/awt/geom/AreaOp.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/Comparator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="145" column="21" lean-forward="true" selection-start-line="145" selection-start-column="21" selection-end-line="145" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/PriorityQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="658" column="23" lean-forward="true" selection-start-line="658" selection-start-column="23" selection-end-line="658" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T29/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" column="21" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1215,6 +1134,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
           <caret line="40" column="38" lean-forward="false" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1229,6 +1149,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="1430" column="27" lean-forward="false" selection-start-line="1430" selection-start-column="27" selection-end-line="1430" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1236,13 +1157,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="729">
           <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T33/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1264,13 +1178,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T38/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1351,9 +1258,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-          <folding>
-            <element signature="e#262#263#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1361,7 +1265,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1369,7 +1272,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1134">
           <caret line="42" column="18" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1377,15 +1279,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T52/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1393,7 +1286,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1401,7 +1293,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="23" column="45" lean-forward="false" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1409,7 +1300,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1417,7 +1307,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1264">
           <caret line="55" column="36" lean-forward="false" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1425,7 +1314,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1433,7 +1321,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1788">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1441,7 +1328,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="32" column="29" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1449,7 +1335,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1457,7 +1342,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1465,7 +1349,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1473,9 +1356,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-260">
           <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1483,7 +1363,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-71">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1491,7 +1370,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-44">
           <caret line="29" column="62" lean-forward="false" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1499,7 +1377,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-314">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1507,17 +1384,88 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
           <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding>
-            <element signature="e#154#155#0" expanded="true" />
-            <element signature="e#228#229#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T65/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        <state relative-caret-position="0">
+          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T38/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T27/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="17" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T27/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/PriorityQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60">
+          <caret line="642" column="17" lean-forward="false" selection-start-line="642" selection-start-column="17" selection-end-line="642" selection-end-column="17" />
+          <folding>
+            <element signature="e#12127#12128#0" expanded="false" />
+            <element signature="e#12158#12159#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T29/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="24" column="22" lean-forward="false" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T33/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-843">
+          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T52/Solution_II.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T52/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-108">
+          <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T35/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
           <folding />
         </state>
       </provider>

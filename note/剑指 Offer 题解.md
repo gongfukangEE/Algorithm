@@ -769,9 +769,42 @@ private void inOrder(TreeNode node) {
 
 **字符串 && 排列组合 && 回溯法**
 
+1. marked 数组标记字符
+2. 递归终止条件：`s.length() == chars.length`
+3. 循环直接跳过：
+   1. 当前字符被标记
+   2. 当前字符未被标记，但是和前一个字符相同（字符串已排序），同时前一个字符已经被标记
+4. 递归结束：
+   1. 重置字符串标记
+   2. 删除最后一个拼接的字符
+
 ```java
+private ArrayList<String> list = new ArrayList<>();
+private boolean[] marked;
 public ArrayList<String> Permutation(String str) {
-    //TODO
+    if (str == null || str.length() == 0)
+        return list;
+    char[] chars = str.toCharArray();
+    marked = new boolean[str.length()];
+    backtracing(chars, new StringBuilder());
+    return list;
+}
+private void backtracing(char[] chars, StringBuilder s) {
+    if (s.length() == chars.length) {
+        list.add(s.toString());
+        return;
+    }
+    for (int i = 0; i < chars.length; i++) {
+        if (marked[i])
+            continue;
+        if (i != 0 && chars[i] == chars[i - 1] && marked[i - 1])
+            continue;
+        s.append(chars[i]);
+        marked[i] = true;
+        backtracing(chars, s);
+        s.deleteCharAt(s.length() - 1);
+        marked[i] = false;
+    }
 }
 ```
 
@@ -924,27 +957,23 @@ public int NumberOf1Between1AndN_Solution(int n) {
 
 ## 32. [把数组排成最小的数](https://www.nowcoder.com/practice/8fecd3f8ba334add803bf2a06af1b993?tpId=13&tqId=11185&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-**数组 && 排列组合 && 回溯法**
+**数组 && 重写比较器**
 
-1. 重写比较器实现自定义排序
+1. 比较 S1+S2 和 S2+S1，小的排前面，重写比较器，将数组排序
 
-   1. 比较 S1+S2 和 S2+S1，小的排前面，重写比较器，将数组排序
+2. **Collections.sort：** `o1` 小于`o2`，返回负数，升序排列；`o1` 小于`o2`，返回正数，升序排列
 
-   2. **Collections.sort：** `o1` 小于`o2`，返回负数，升序排列；`o1` 小于`o2`，返回正数，升序排列
+   ```java
+   Collections.sort(List, (o1, o2) -> o1.compareTo(o2));
+   Collections.sort(List, (o1, o2) -> o2.compareTo(o1));
+   ```
 
-      ```java
-      Collections.sort(List, (o1, o2) -> o1.compareTo(o2));
-      Collections.sort(List, (o1, o2) -> o2.compareTo(o1));
-      ```
+3. **Arrays.sort：**`o1` 小于`o2`，返回负数，升序排列；`o1` 小于`o2`，返回正数，升序排列
 
-   3. **Arrays.sort：**`o1` 小于`o2`，返回负数，升序排列；`o1` 小于`o2`，返回正数，升序排列
-
-      ```java
-      Arrays.sort(T[], (o1, o2) -> o1.compareTo(o2));
-      Arrays.sort(T[], (o1, o2) -> o2.compareTo(o1));
-      ```
-
-2. 回溯法
+   ```java
+   Arrays.sort(T[], (o1, o2) -> o1.compareTo(o2));
+   Arrays.sort(T[], (o1, o2) -> o2.compareTo(o1));
+   ```
 
 ```java
 /* 排序比较 */
@@ -962,17 +991,97 @@ public String PrintMinNumber(int[] numbers) {
         res += item;
     return res;
 }
-/* 回溯法 */
-public String PrintMinNumber(int[] numbers) {
-    // TODO
-}
 ```
 
 ## 33. [丑数](https://www.nowcoder.com/practice/6aa9e04fc3794f68acf8778237ba065b?tpId=13&tqId=11186&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-**动态规划**
+1. 丑数的定义：`P=2^x*3^y*5^z`
 
-// TODO
+2. 暴力求解：
+
+   1. 维护一个小顶堆，由于 1 是最小的丑数，则堆的初始为 {2，3，5} 
+   2. 每次移除堆顶元素为下一个丑数，同时添加 `2 * minHeap.peek()`、`3 * minHeap.peek()`、`5 * minHeap.peek()`
+   3. 直到取得第 N 个元素
+
+3. 动态规划
+
+   1. 维护三个数组（同一个数组的三个指针）分别是 2、3、5 三个指向 P2，P3，P5，用`|`表示
+
+   2. 下一个丑数为三个中最小的 P，先在数组中添加 2P、3P、5P，元素，再将 P 的索引加 1
+
+   3. 直到取得第 N 个元素
+
+      ```java
+           丑数 1
+           队列：|2
+                |3
+                |5
+           丑数 1，2
+           队列：2，|4
+                |3，6
+                |5，10
+           丑数 1，2，3
+           队列：2，|4，6
+                3，|6，9
+               |5，10，15
+      ```
+
+```java
+/* 维护一个数组的三个指针 */
+public int GetUglyNumber_Solution(int index) {
+    if (index <= 6)
+        return index;
+    int[] dp = new int[index];
+    dp[0] = 1;
+    int i2 = 0, i3 = 0, i5 = 0;
+    for (int i = 1; i < index; i++) {
+        val2 = dp[i2] * 2;
+        val3 = dp[i3] * 3;
+        val5 = dp[i5] * 5;
+        dp[i] = Math.min(val2, Math.min(val3, val5));
+        if (dp[i] == val2)
+            i2++;
+        if (dp[i] == val3)
+            i3++;
+        if (dp[i] == val5)
+            i5++;
+    }
+    return dp[index - 1];
+}
+/* 分别维护三个链表 */
+public int GetUglyNumber_Solution(int index) {
+    if (index <= 6) {
+        return index;
+    }
+    int[] ret = new int[index];
+    ArrayList<Integer> list2 = new ArrayList<>();
+    ArrayList<Integer> list3 = new ArrayList<>();
+    ArrayList<Integer> list5 = new ArrayList<>();
+    ret[0] = 1;
+    list2.add(2);
+    list3.add(3);
+    list5.add(5);
+    for (int i = 1; i < index; i++) {
+        int next2 = list2.get(0);
+        int next3 = list3.get(0);
+        int next5 = list5.get(0);
+        ret[i] = Math.min(next2, Math.min(next3, next5));
+        if (ret[i] == next2) {
+            list2.remove(0);
+        }
+        if (ret[i] == next3) {
+            list3.remove(0);
+        }
+        if (ret[i] == next5) {
+            list5.remove(0);
+        }
+        list2.add(ret[i] * 2);
+        list3.add(ret[i] * 3);
+        list5.add(ret[i] * 5);
+    }
+    return ret[index - 1];
+}
+```
 
 ## 34. [第一个只出现一次的字符](https://www.nowcoder.com/practice/1c82e8cf713b4bbeb2a5b31cf5b0417c?tpId=13&tqId=11187&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
@@ -1003,7 +1112,46 @@ public int FirstNotRepeatingChar(String str) {
 
 ## 35. [数组中的逆序对](https://www.nowcoder.com/practice/96bd6684e04a44eb80e6a68efc0ec6c5?tpId=13&tqId=11188&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-// TODO
+**归并排序**
+
+1. 归并排序的改进
+2. 归并比较大小过程中，如果前面 i 位置大于后面 j 位置，则当前逆序对为 `m - i + 1`
+
+```java
+private long count = 0;
+private int[] copy;
+public int InversePairs(int[] array) {
+    copy = new int[array.length];
+    mergeSort(array, 0, array.length - 1);
+    return (int) (count % 1000000007);
+}
+private void mergeSort(int[] arr, int l, int h) {
+    if (l >= h)
+        return;
+    int mid = l + (h - l) / 2;
+    mergeSort(arr, l, mid);
+    mergeSort(arr, mid + 1, h);
+    merge(arr, l, mid, h);
+}
+private void merge(int[] arr, int l , int m, int h) {
+    int i = l;
+    int j = m + 1;
+    for (int k = l; k <= h; k++)
+        copy[k] = arr[k];
+    for (int k = l; k <= h; k++) {
+        if (i > m)
+            arr[k] = copy[j++];
+        else if (j > h)
+            arr[k] = copy[i++];
+        else if (copy[i] < arr[j])
+            arr[k] = copy[i++];
+        else {
+            arr[k] = copy[j++];
+            count += m - i + 1;
+        }
+    }
+}
+```
 
 ## 36. [两个链表的第一个公共节点](https://www.nowcoder.com/practice/6ab1d9a29e88450685099d45c9e31e46?tpId=13&tqId=11189&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
@@ -1590,7 +1738,55 @@ public int[] multiply(int[] A) {
 
 ## 52. [正则表达式匹配](https://www.nowcoder.com/practice/45327ae22b7b413ea21df13ee7d6429c?tpId=13&tqId=11205&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-//TODO
+**动态规划**
+
+1. 基本思想：从前向后，维护两个指针（一个指针遍历 S，一个指针遍历 P，并不断判断当前两指针的子串是否匹配）。利用一个 `boolean[s.length+1][p.length+1]` 来表示，`dp[i][j]` 表示，若 S 的子串 `[0, i-1]` 和 P 的子串 `[0, j-1]` 相匹配为 `true`，不匹配则为 `false`，以下表中 `dp[4][3] = 1`为例子，表示 `aa` 和 `ab*a` 相匹配。由于 `dp[0][0]` 表示 P 和 S 均为空串，则 `P[i - 1]` 表示当前字符
+2. 填充数组第一行：S 为空串，若要匹配
+   1. P 为空串
+   2. P 为 `x*y*` 形式， `P[i - 1] == *` 时，`dp[0][i] = dp[0][i - 2]`
+3. 填充剩下的部分：每次 S 字符往下走一个字符，然后和所有的 P 子串匹配
+   1. `P[i - 1] != *`：P 和 S 的字符相等，或者 P 的字符为 `.`
+   2. `P[i - 1] == *`：[1] `*` 代表空串 [2] `*` 代表对前一个字符串的复制（0 或多个）
+4. 动态规划表
+    | S\P  |   ""    |    a    |    b    |    *    |    a    |    c    |    *    |    a    |
+    | :--: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
+    |  ""  | ***1*** |    0    |    0    |    0    |    0    |    0    |    0    |    0    |
+    |  a   |    0    | ***1*** | ***0*** | ***1*** |    0    |    0    |    0    |    0    |
+    |  a   |    0    |    0    |    0    |    0    | ***1*** | ***0*** | ***1*** |    0    |
+    |  a   |    0    |    0    |    0    |    0    |    0    |    0    |    0    | ***1*** |
+
+```java
+public boolean match(char[] str, char[] pattern) {
+    int m = str.length;
+    int n = pattern.length;
+    boolean[][] dp = new boolean[m + 1][n + 1];
+    dp[0][0] = true;
+    for (int i = 1; i <= n; i++)
+        if (pattern[i - 1] == '*')
+            dp[0][i] = dp[0][i - 2];
+
+    for (int i = 1; i <= m; i++) {
+        for (int j = 1; j <= n; j++) {
+            if (str[i - 1] == pattern[j - 1] || pattern[j - 1] == '.') {
+                dp[i][j] = dp[i - 1][j - 1];
+            } else if (pattern[j - 1] == '*'){
+                if (pattern[j - 2] == str[i - 1] || pattern[j - 2] == '.') {
+                    // 匹配 0 个
+                    dp[i][j] |= dp[i][j - 2];
+                    // 匹配 1 个
+                    dp[i][j] |= dp[i][j - 1];
+                    // 匹配多个
+                    dp[i][j] |= dp[i - 1][j];
+                } else {
+                    // 仅仅匹配 0 个
+                    dp[i][j] = dp[i][j - 2];
+                }
+            }
+        }
+    }
+    return dp[m][n];
+}
+```
 
 ## 53. [表示数值的字符串](https://www.nowcoder.com/practice/6f8c901d091949a5837e24bb82a731f2?tpId=13&tqId=11206&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 

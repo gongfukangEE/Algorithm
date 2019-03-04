@@ -7,8 +7,6 @@ package Algorithm.Offer.Topic.T52;
  */
 public class Solution {
 
-    // todo
-
     public static void main(String[] args) {
         char[] str = "".toCharArray();
         char[] pattern = ".*".toCharArray();
