@@ -41,3 +41,49 @@ public boolean judgeSquareSum(int c) {
 
 [T345. 反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/)
 
+```java
+private HashSet<Character> set = 
+    new HashSet<>(Arrays.asList('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'));
+public String reverseVowels(String s) {
+    int i = 0;
+    int j = s.length() - 1;
+    char[] chars = s.toCharArray();
+    while (i <= j) {
+        char ci = chars[i];
+        char cj = chars[j];
+        if (!set.contains(ci))
+            chars[i++] = ci;
+        else if (!set.contains(cj))
+            chars[j--] = cj;
+        else {
+            chars[i++] = cj;
+            chars[j--] = ci;
+        }
+    }
+    return new String(chars);
+}
+```
+
+[T680 验证回文字符串 II](https://leetcode-cn.com/problems/valid-palindrome-ii/)
+
+**递归**
+
+```java
+public boolean validPalindrome(String s) {
+    int start = -1;
+    int end = s.length();
+    while (++start < --end)
+        if (s.charAt(start) != s.charAt(end))
+            return isValidPalindrome(s, start, end - 1) 
+            || isValidPalindrome(s, start + 1, end);
+    return true;
+}
+
+private boolean isValidPalindrome(String s, int i, int j) {
+    while (i < j)
+        if (s.charAt(i++) != s.charAt(j--))
+            return false;
+    return true;
+}
+```
+
