@@ -1,6 +1,6 @@
 ## 数据结构 && 算法分析      
 
-[剑指 Offer 题解](https://github.com/gongfukangEE/Algorithm/tree/master/src/Algorithm)
+[剑指 Offer 题解](https://github.com/gongfukangEE/Algorithm/blob/master/note/%E5%89%91%E6%8C%87%20Offer%20%E9%A2%98%E8%A7%A3.md)
 
 #### 参考
 

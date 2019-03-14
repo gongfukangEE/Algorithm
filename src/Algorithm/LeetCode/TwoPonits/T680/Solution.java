@@ -1,4 +1,4 @@
-package Algorithm.LeetCode.Topic.T680;
+package Algorithm.LeetCode.TwoPonits.T680;
 
 /**
  * @auther G.Fukang

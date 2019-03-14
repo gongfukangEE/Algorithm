@@ -1,6 +1,4 @@
-package Algorithm.LeetCode.Topic.T167;
-
-import java.util.Iterator;
+package Algorithm.LeetCode.TwoPonits.T167;
 
 /**
  * @auther G.Fukang

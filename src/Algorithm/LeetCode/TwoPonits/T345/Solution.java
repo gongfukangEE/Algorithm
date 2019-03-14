@@ -1,4 +1,4 @@
-package Algorithm.LeetCode.Topic.T345;
+package Algorithm.LeetCode.TwoPonits.T345;
 
 import java.util.Arrays;
 import java.util.HashSet;

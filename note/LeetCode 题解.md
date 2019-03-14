@@ -87,3 +87,26 @@ private boolean isValidPalindrome(String s, int i, int j) {
 }
 ```
 
+[T88 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)
+
+```java
+public void merge(int[] nums1, int m, int[] nums2, int n) {
+    int i = m - 1, j = n - 1;
+    int index = m + n - 1;
+    while (i >= 0 && j >= 0) {
+        int num1 = nums1[i];
+        int num2 = nums2[j];
+        if (num1 >= num2) {
+            nums1[index] = num1;
+            i--;
+        } else {
+            nums1[index] = num2;
+            j--;
+        }
+        index--;
+    }
+    while (j >= 0)
+        nums1[index--] = nums2[j--];
+}
+```
+
