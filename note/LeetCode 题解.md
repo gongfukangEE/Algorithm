@@ -1,4 +1,4 @@
-# 双指针
+## 双指针
 
 [T167. 两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)
 
@@ -66,8 +66,6 @@ public String reverseVowels(String s) {
 
 [T680 验证回文字符串 II](https://leetcode-cn.com/problems/valid-palindrome-ii/)
 
-**递归**
-
 ```java
 public boolean validPalindrome(String s) {
     int start = -1;
@@ -110,3 +108,88 @@ public void merge(int[] nums1, int m, int[] nums2, int n) {
 }
 ```
 
+[T141 判断链表有环](https://leetcode-cn.com/problemset/all/?search=141)
+
+```java
+public boolean hasCycle(ListNode head) {
+    if (head == null || head.next == null)
+        return false;
+    ListNode fast = head.next;
+    ListNode slow = head;
+    while (slow != null && fast != null) {
+        if (fast.next == null)
+            return false;
+        slow = slow.next;
+        fast = fast.next.next;
+        if (slow == fast)
+            return true;
+    }
+    return false;
+}
+```
+
+[T524M 通过删除字母匹配到字典里的最长单词](https://leetcode-cn.com/problems/longest-word-in-dictionary-through-deleting/)
+
+```java
+private char[] chars;
+
+public String findLongestWord(String s, List<String> d) {
+    String res = "";
+    if (s != null && s.length() != 0) {
+        chars = s.toCharArray();
+        for (String target : d) {
+            int resLength = res.length();
+            int targetLength = target.length();
+            if (resLength > targetLength || (resLength == targetLength 
+                                             && res.compareTo(target) < 0))
+                continue;
+            if (isCommonWord(target.toCharArray()))
+                res = target;
+        }
+    }
+    return res;
+}
+
+private boolean isCommonWord(char[] dchars) {
+    int i = 0, j = 0;
+    while (i < chars.length && j < dchars.length) {
+        if (chars[i] == dchars[j]) {
+            j++;
+        }
+        i++;
+    }
+    return j == dchars.length;
+}
+```
+
+## 排序
+
+## 贪心思想
+
+## 二分查找
+
+## 分治
+
+## 搜索
+
+## 动态规划
+
+## 数学
+
+## 链表
+
+[T160 ]()
+
+## 树
+
+## 栈和队列
+
+## 哈希表
+
+## 字符串
+
+## 数组和矩阵
+
+## 图
+
+## 位运算
