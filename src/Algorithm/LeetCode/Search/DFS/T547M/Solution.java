@@ -6,34 +6,37 @@ package Algorithm.LeetCode.Search.DFS.T547M;
  */
 public class Solution {
 
-    private int rows, cols;
-    private int[][] next = {{0, 1}, {0 ,-1}, {1, 0}, {-1, 0}};
+    /**
+     * 以某一个朋友为起点，一直寻找与其连通的朋友，直到没有连通的，则构成一个朋友圈
+     *
+     * @author G.Fukang
+     * @date: 4/8 23:26
+     */
+    private int n;
+    private boolean[] marked;
     public int findCircleNum(int[][] M) {
         if (M.length == 0 || M[0].length == 0) {
             return 0;
         }
-        this.rows = M.length;
-        this.cols = M[0].length;
+        this.n = M.length;
+        this.marked = new boolean[n];
         int resCount = 0;
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                if (M[i][j] == 1) {
-                    dfs(M, i, j);
-                    ++resCount;
-                }
+        for (int i = 0; i < n; i++) {
+            if (!marked[i]) {
+                dfs(M, i);
+                resCount++;
             }
         }
+
         return resCount;
     }
 
-    private void dfs(int[][] M, int row, int col) {
-        if (row < 0 || row >= rows || col < 0 || col >= cols || M[row][col] == 0) {
-            return;
-        }
-        // 标记已访问
-        M[row][col] = 0;
-        for (int[] item : next) {
-            dfs(M, row + item[0], col + item[1]);
+    private void dfs(int[][] M, int i) {
+        marked[i] = true;
+        for (int j = 0; j < n; j++) {
+            if (M[i][j] == 1 && !marked[j]) {
+                dfs(M, j);
+            }
         }
     }
 }
