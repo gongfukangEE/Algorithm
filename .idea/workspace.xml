@@ -15,7 +15,7 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Search/Backtracking/T93M/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1134">
+            <state relative-caret-position="0">
               <caret line="43" column="35" lean-forward="false" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -24,12 +24,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Search/Backtracking/T79M/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            <state relative-caret-position="432">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Search/Backtracking/T257/Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#259#267#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,7 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Algorithm/Offer/Topic/T61/Solution.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/Offer/Topic/T63/Solution.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/Offer/Topic/T66/Solution.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/Offer/Topic/T65/Solution.java" />
@@ -140,6 +152,7 @@
         <option value="$PROJECT_DIR$/src/Algorithm/LeetCode/Search/Backtracking/T17M/Solution.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/LeetCode/Search/Backtracking/T93M/Solution.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/LeetCode/Search/Backtracking/T79M/Solution.java" />
+        <option value="$PROJECT_DIR$/src/Algorithm/LeetCode/Search/Backtracking/T257/Solution.java" />
       </list>
     </option>
   </component>
@@ -156,7 +169,7 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="408" />
     <option name="y" value="151" />
     <option name="width" value="1028" />
@@ -180,7 +193,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,6 +213,13 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="commons" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
@@ -241,15 +263,23 @@
               <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
               <item name="Search" type="462c0819:PsiDirectoryNode" />
               <item name="Backtracking" type="462c0819:PsiDirectoryNode" />
+              <item name="T79M" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="Search" type="462c0819:PsiDirectoryNode" />
+              <item name="Backtracking" type="462c0819:PsiDirectoryNode" />
               <item name="T93M" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -284,7 +314,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Solution">
+  <component name="RunManager" selected="Application.Solution (4)">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -352,11 +382,11 @@
     <configuration name="Solution (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Algorithm.LeetCode.Search.Backtracking.T93M.*" />
+          <option name="PATTERN" value="Algorithm.LeetCode.Search.Backtracking.T79M.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Algorithm.LeetCode.Search.Backtracking.T93M.Solution" />
+      <option name="MAIN_CLASS_NAME" value="Algorithm.LeetCode.Search.Backtracking.T79M.Solution" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -376,25 +406,6 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="Algorithm.LeetCode.BinarySearch.T153.Solution" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Algorithm" />
-      <envs />
-    </configuration>
-    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Algorithm.LeetCode.TwoPonits.T345.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="Algorithm.LeetCode.TwoPonits.T345.Solution" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -481,18 +492,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Solution" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Solution (5)" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Solution (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Solution (2)" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Solution (3)" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Solution (5)" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Solution (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Solution (2)" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Solution (3)" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Solution (4)" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.Solution (3)" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Solution (2)" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Solution (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Solution (5)" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.Solution (4)" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Solution (3)" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Solution (2)" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Solution (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Solution (5)" />
       </list>
     </recent_temporary>
   </component>
@@ -537,12 +549,13 @@
       <workItem from="1554127201200" duration="25599000" />
       <workItem from="1554384527269" duration="661000" />
       <workItem from="1554643679776" duration="41174000" />
-      <workItem from="1554989895315" duration="150000" />
+      <workItem from="1554989895315" duration="619000" />
+      <workItem from="1555334340185" duration="6249000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="566128000" />
+    <option name="totallyTimeSpent" value="572846000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -554,10 +567,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="408" y="151" width="1028" height="632" extended-state="0" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21793535" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2168926" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -569,7 +584,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947367" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27376032" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14057332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947367" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24915062" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -582,7 +597,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24915062" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2168926" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32862645" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -652,7 +666,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="174" />
+      <option name="time" value="176" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -723,20 +737,6 @@ A.compareTo(B)</expression-string>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T33/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-843">
-          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T52/Solution_II.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Algorithm/Offer/Topic/T52/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -1018,9 +1018,6 @@ A.compareTo(B)</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1047,7 +1044,7 @@ A.compareTo(B)</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Search/Backtracking/T93M/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
+        <state relative-caret-position="0">
           <caret line="43" column="35" lean-forward="false" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1057,9 +1054,28 @@ A.compareTo(B)</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Search/Backtracking/T79M/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        <state relative-caret-position="432">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm/commons/TreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Search/Backtracking/T257/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#259#267#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
