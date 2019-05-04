@@ -41,6 +41,7 @@ public class Solution {
     }
 
     private boolean match(char[] str, char[] pattern, int index1, int index2) {
+
         if (index1 == str.length - 1 && index2 == pattern.length) {
             return true;
         }
