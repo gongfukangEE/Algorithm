@@ -1418,8 +1418,8 @@ public ArrayList<Integer> FindNumbersWithSum(int[] array, int sum) {
     return list;
 }
 private int BinaySearch(int[] array, int low, int high, int target) {
-    int mid = low + (high - low) / 2;
     while (low < high) {
+        int mid = low + (high - low) / 2;
         if (target > array[mid]) 
             low = mid + 1;
         else
@@ -1503,7 +1503,6 @@ public String ReverseSentence(String str) {
             break;
         } else {
             reverse(chars, start, end - 1);
-            i = end + 1;
         }
     }
     reverse(chars, 0, chars.length - 1);
