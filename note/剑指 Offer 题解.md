@@ -107,7 +107,7 @@ public TreeNode reConstructBinaryTree(int[] pre, int preL, int preR, int inL) {
     int index = map.get(root.val);
     int leftSize = index - inL;
     root.left = reConstructBinaryTree(pre, preL + 1, preL + leftSize, inL);
-    root.right = reConstructBinaryTree(pre, preL + leftSize + 1, inL + leftSise + 1);
+    root.right = reConstructBinaryTree(pre, preL + leftTreeSize + 1, preR, inL + leftTreeSize + 1);
     return root;
 }
 ```
