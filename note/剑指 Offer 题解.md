@@ -1908,19 +1908,21 @@ public ListNode deleteDuplication(ListNode pHead) {
     return newHead.next;
 }
 /* 递归 */
-public ListNode deleteDuplication(ListNode pHead) {
-    if (pHead == null || pHead.next == null)
-        return pHead;
-    if（pHead.val == pHead.next.val） {
-        ListNode node = pHead.next;
-        while(node != null && pHead.val == node.val)
-            node = node.next;
-        return deleteDuplication(pHead.next);
-    } else {
-        pHead.next = deleteDuplication(pHead.next);
-        return pHead;
+    public ListNode deleteDuplication(ListNode pHead) {
+        if (pHead == null || pHead.next == null) {
+            return pHead;
+        }
+        if (pHead.val == pHead.next.val) {
+            ListNode node = pHead.next;
+            while (node != null && pHead.val == node.val) {
+                node = node.next;
+            }
+            return deleteDuplication(node);
+        } else {
+            pHead.next = deleteDuplication(pHead.next);
+            return pHead;
+        }
     }
-}
 ```
 
 ## 57. [二叉树的下一个节点](https://www.nowcoder.com/practice/9023a0c988684a53960365b889ceaf5e?tpId=13&tqId=11210&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
