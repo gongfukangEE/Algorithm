@@ -822,7 +822,7 @@ private void backtracing(char[] chars, StringBuilder s) {
 public int MoreThanHalfNum_Solution(int[] array) {
     int majority = array[0];
     int i;
-    int count;
+    int count = 0;
     for (i = 1, count = 1; i < array.length; i++) {
         if (array[i] == majority) 
             count++;
