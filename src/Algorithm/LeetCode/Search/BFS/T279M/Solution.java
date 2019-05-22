@@ -1,9 +1,6 @@
 package Algorithm.LeetCode.Search.BFS.T279M;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * @auther G.Fukang
@@ -67,5 +64,24 @@ public class Solution {
             }
         }
         return n;
+    }
+
+    /**
+     * 动态规划
+     * dp[i] 表示 i 最少能由多少个平方数组成
+     * 对于一个数组成它的完全平方数的最少个数：它减去 j*j 后对应的那个数的最少完全平方数 +1
+     * dp[i] = Min{dp[i], dp[i - j*j] + 1}
+     */
+    public int numSquares_II(int n) {
+        int[] dp = new int[n + 1];
+        // 初始化
+        Arrays.fill(dp, Integer.MAX_VALUE);
+        dp[0] = 0;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; i - j*j >= 0; j++) {
+                dp[i] = Math.min(dp[i], dp[i - j*j] + 1);
+            }
+        }
+        return dp[n];
     }
 }
