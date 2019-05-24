@@ -8,10 +8,6 @@ import java.util.*;
  */
 public class Solution {
 
-    public static void main(String[] args) {
-        System.out.println(new Solution().numSquares(12));
-    }
-
     /**
      * 将每个数字看作图中的一个点，如果两个数字直接差值为完全平方数，则两点之间存在边，权值为完全平方数
      * 目的就是找到点 n 到 0 的最短路径

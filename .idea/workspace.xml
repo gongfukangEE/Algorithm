@@ -13,94 +13,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/List/T160/Solution.java">
+        <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/DynamicProgramming/T309/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="T160.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Topic/T160.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="729">
-              <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="T169.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Topic/T169.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Graph/T207/Solution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/List/T234/Solution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="T240.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Topic/T240.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+            <state relative-caret-position="297">
+              <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Search/BFS/T279M/Solution.java">
+        <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/DynamicProgramming/T123H/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="76" column="14" lean-forward="true" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
+            <state relative-caret-position="729">
+              <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="T238.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Topic/T238.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Trie.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Graph/T208/Trie.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding>
-                <element signature="e#308#309#0" expanded="true" />
-                <element signature="e#345#346#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -162,10 +89,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Algorithm/LeetCode/List/T23H/Solution.java" />
-        <option value="$PROJECT_DIR$/src/Algorithm/LeetCode/BinarySearch/T34M.java" />
-        <option value="$PROJECT_DIR$/src/Algorithm/LeetCode/BinarySearch/T34M/T34M.java" />
-        <option value="$PROJECT_DIR$/src/Algorithm/LeetCode/BinarySearch/T34M/T33M.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/LeetCode/Topic/T33M.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/LeetCode/Topic/T46M.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/LeetCode/Topic/T48M.java" />
@@ -212,7 +135,11 @@
         <option value="$PROJECT_DIR$/src/Algorithm/LeetCode/Topic/T238.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/LeetCode/Topic/T240.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/LeetCode/Topic/T279.java" />
+        <option value="$PROJECT_DIR$/src/Algorithm/LeetCode/Topic/T300.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/LeetCode/Search/BFS/T279M/Solution.java" />
+        <option value="$PROJECT_DIR$/src/Algorithm/LeetCode/Greedy/T309/Solution.java" />
+        <option value="$PROJECT_DIR$/src/Algorithm/LeetCode/DynamicProgramming/T309/Solution.java" />
+        <option value="$PROJECT_DIR$/src/Algorithm/LeetCode/DynamicProgramming/T123H/Solution.java" />
       </list>
     </option>
   </component>
@@ -285,7 +212,32 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="DynamicProgramming" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
               <item name="Graph" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="Greedy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="Greedy" type="462c0819:PsiDirectoryNode" />
+              <item name="T122" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
@@ -663,12 +615,12 @@
       <workItem from="1556709331402" duration="30650000" />
       <workItem from="1557141217003" duration="24966000" />
       <workItem from="1557574649311" duration="40125000" />
-      <workItem from="1558445609417" duration="8400000" />
+      <workItem from="1558445609417" duration="16854000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="762954000" />
+    <option name="totallyTimeSpent" value="771408000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -841,42 +793,12 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Sort/T75/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/TwoPonits/T76H/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1269">
-          <caret line="47" column="24" lean-forward="true" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Topic/T76H.java" />
-    <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Topic/T75M.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Topic/T55M.java" />
     <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Greedy/T121/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Greedy/T122/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1107,8 +1029,8 @@
         <state relative-caret-position="162">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
-            <element signature="e#308#309#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
+            <element signature="e#308#309#0" expanded="false" />
+            <element signature="e#345#346#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1154,10 +1076,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/DynamicProgramming/T300M/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Topic/T300.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Search/BFS/T279M/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="76" column="14" lean-forward="true" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
+        <state relative-caret-position="216">
+          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/Greedy/T122/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/DynamicProgramming/T309/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm/LeetCode/DynamicProgramming/T123H/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
           <folding />
         </state>
       </provider>
