@@ -94,19 +94,25 @@ public void printListFromTailToHead(ListNode listNode, ArrayList<Integer> resLis
 5. 模拟先序遍历过程，递归插入左子树和右子树
 
 ```java
-private HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-public TreeNode reConstructBinaryTree(int [] pre,int [] in) {
-    for (int i = 0; i < in.lenght; i++)
+private HashMap<Integer, Integer> map = new HashMap<>();
+public TreeNode reConstructBinaryTree(int [] pre, int [] in) {
+    for (int i = 0; i < pre.length; i++) {
         map.put(in[i], i);
+    }
     return reConstructBinaryTree(pre, 0, pre.length - 1, 0);
 }
-public TreeNode reConstructBinaryTree(int[] pre, int preL, int preR, int inL) {
-    if (preR < preL)
+
+private TreeNode reConstructBinaryTree(int[] pre, int preL, int preR, int inL) {
+    if (preL > preR) {
         return null;
+    }
+    // 先序遍历的 root 节点
     TreeNode root = new TreeNode(pre[preL]);
-    int index = map.get(root.val);
-    int leftSize = index - inL;
-    root.left = reConstructBinaryTree(pre, preL + 1, preL + leftSize, inL);
+    // 找到 root 在中序遍历数组的位置
+    int inIndex = map.get(root.val);
+    // 中序遍历中左子树的范围
+    int leftTreeSize = inIndex - inL;
+    root.left = reConstructBinaryTree(pre, preL + 1, preL + leftTreeSize, inL);
     root.right = reConstructBinaryTree(pre, preL + leftTreeSize + 1, preR, inL + leftTreeSize + 1);
     return root;
 }
