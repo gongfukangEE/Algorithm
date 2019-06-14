@@ -145,8 +145,8 @@ public int pop() {
 
 **二分查找 && 数组**
 
-1. mid > right：最小值位于数组右半部分
-2. mid < right：最小值位于数组左半部分
+1. mid > right：最小值位于数组右半部分  `4 5 6 7 1 2 3`
+2. mid < right：最小值位于数组左半部分  `6 7 1 2 3 4 5 `
 3. mid = right：最小值位于当下数组中，且数组左右端点值相等，存在重复值，依次寻找
 
 ```java
@@ -344,22 +344,20 @@ public void reOrderArray(int[] array) {
 2. first 和 last 同时向前运动，当 last 走到最后一个节点时，first 指向的节点就是倒数第 K 个节点
 
 ```java
-public ListNode FindKthToTail(ListNode head, int k) {
-    if(head == null || k == 0)
+public ListNode FindKthToTail(ListNode head,int k) {
+    if (head == null || k == 0) {
         return null;
-    ListNode first = head;
-    ListNode last = head;
-    int count = 1;
-    while (last.next != null) {
-        last = last.next;
-        ++count;
-        if (count > k)
-            first = first.next;
     }
-    if (count < k)
-        return null;
-    else 
-        return first;
+    ListNode fast = head;
+    int count = 1;
+    while (fast.next != null) {
+        fast = fast.next;
+        count++;
+        if (count > k) {
+            head = head.next;
+        }
+    }
+    return count >= k ? head : null;
 }
 ```
 
@@ -406,6 +404,11 @@ public ListNode ReverseList(ListNode head) {
 2. 若 `list1.val` 小，则当前插入的节点为 `list1`，后续节点为 `list1.next = Merge()`
 3. 若 `list2.val` 小，则当前插入的节点为 `list2`，后续节点为 `list2.next = Merge()`
 
+**[合并 K 个有序链表](<https://leetcode-cn.com/problems/merge-k-sorted-lists/submissions/>)**
+
+1. 递归分治将链表两两划分
+2. 递归合并两个有序链表
+
 ```java
 /* 递归 */
 public ListNode Merge(ListNode list1, ListNode list2) {
@@ -447,6 +450,31 @@ public ListNode Merge(ListNode list1, ListNode list2) {
         cur.next = list2;
     return res.next;
 }
+/* 合并 K 个有序链表 */
+public ListNode mergeKLists(ListNode[] lists) {
+    return helpMerge(lists, 0, lists.length - 1);
+}
+// 划分链表
+private ListNode helpMerge(ListNode[] lists, int start, int end) {
+    if (start > end)	return null;
+    if (start == end)	return lists[start];
+    int mid = (start + end) / 2;
+    ListNode left = helpMerge(lists, start, mid);
+    ListNode right = helpMerge(lists, mid + 1, end);
+    return merge(left, right);
+}
+// 合并两个有序链表
+private ListNode merge(ListNode l1, ListNode l2) {
+    if (l1 == null)	return l2;
+    if (l2 == null)	return l1;
+    if (l1.val <= l2.val) {
+        l1.next = merge(l1.next, l2);
+        return l1;
+    } else {
+        l2.next = merge(l1, l2.next);
+        return l2;
+    }
+}
 ```
 
 ## 17. [判断树的子结构](https://www.nowcoder.com/practice/6e196c44c7004d15b1610b9afca8bd88?tpId=13&tqId=11170&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
@@ -462,28 +490,17 @@ public ListNode Merge(ListNode list1, ListNode list2) {
    3. 分别在对树 A 和树 B 的左右子树进行匹配，两者均为 true 才是匹配成功
 
 ```java
-public boolean HasSubtree(TreeNode root1, TreeNode root2) {
-    boolean isSubtree = false;
-   if (root1 == null || root2 == null)
-       return false;
-    if (root1.val == root2.val) 
-        isSubtree = HasSubtreeRecursion(root1, root2);
-    if (!isSubtree)
-        isSubtree = HasSubtreeRecursion(root1.left, root2);
-    if (!isSubtree)
-        isSubtree = HasSubtreeRecursion(root1.right, root2);
-    return isSubtree;
+public boolean HasSubtree(TreeNode root1,TreeNode root2) {
+    boolean res = false;
+    if ((root1 != null && root2 == null) || (root1 == null))    return false;
+    if (root1.val == root2.val)    res = isSubtree(root1, root2);
+    if (res)    return true;
+    else    return isSubtree(root1.left, root2) | isSubtree(root1.right, root2);
 }
-private boolean HasSubtreeRecursion(TreeNode root1, TreeNode root2) {
-    if (root2 == null) 
-        return true;
-    if (root1 == null && root2 != null)
-        return false;
-    if (root1.val != root2.val)
-        return false;
-    boolean left = HasSubtreeRecursion(root1.left, root2.left);
-    boolean right = HasSubtreeRecursion(root1.right, root2.right);
-    return left & right;
+private boolean isSubtree(TreeNode t1, TreeNode t2) {
+    if (t2 == null)    return true;
+    if ((t1 == null && t2 != null) || (t1.val != t2.val))     return false;
+    return isSubtree(t1.left, t2.left) & isSubtree(t1.right, t2.right);
 }
 ```
 
@@ -678,30 +695,25 @@ private boolean doVerifySquenceOfBST(int[] sequence, int left, int right){
 4. 递归退出一层后，从 list 中删除当前节点，并在 sum 中减去节点值
 
 ```java
-private ArrayList<ArrayList<Integer>> resList = new ArrayList<>();
-private ArrayList<Integer> list = new ArrayList<Integer>();
-private int sum = 0;
-public ArrayList<ArrayList<Integer>> FindPath(TreeNode root, int target) {
-   if (root == null || target == 0)
-       return resList;
+private ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+private ArrayList<Integer> list = new ArrayList<>();
+public ArrayList<ArrayList<Integer>> FindPath(TreeNode root,int target) {
+    if (root == null || target <= 0)    return res;
     doFindPath(root, target);
-    return resList;
+    return res;
 }
 private void doFindPath(TreeNode root, int target) {
-    if (root == null || sum > target)
-        return;
-    int val = root.val;
-    list.add(val);
-    sum += val;
+    if (root == null && target != 0)    return;
+    list.add(root.val);
     if (root.left == null && root.right == null) {
-        if (sum == target)
-            resList.add(new ArrayList<Integer>(list));
+        if (target == root.val) {
+            res.add(new ArrayList(list));
+        }
     } else {
-        doFindPath(root.left, target);
-        doFindPath(root.right, target);
+        doFindPath(root.left, target - root.val);
+        doFindPath(root.right, target - root.val);
     }
-    list.remove((Object) val);
-    sum -= val;
+    list.remove(list.size() - 1);
 }
 ```
 
@@ -846,24 +858,6 @@ public int MoreThanHalfNum_Solution(int[] array) {
     }
     return count > (array.length / 2) ? majority : 0;
 }
-/* HashTable */
-public int MoreThanHalfNum_Solution(int[] array) {
-    Hashtable<Integer, Integer> table = new Hashtable<>();
-    for (Integer item : array){
-        int count = 1;
-        if (table.containsKey(item)) {
-            count = table.get(item);
-            table.put(item, ++count);
-        } else {
-            table.put(item, count);
-        }
-        if (count > array.length / 2)
-            return item;
-        else
-            continue;
-    }
-    return 0;
-}
 ```
 
 ## 29. [最小的 k 个数](https://www.nowcoder.com/practice/6a296eb82cf844ca8539b57c23e6e9bf?tpId=13&tqId=11182&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
@@ -895,11 +889,9 @@ PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(k, new Comparator<In
         return o2 - o1;
     }
 });
-/* lambda */
-PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(k, (o1, o2) -> o2 - o1);
 ```
 
-##30. [连续子数组的最大和](https://www.nowcoder.com/practice/459bd355da1549fa8a49e350bf3df484?tpId=13&tqId=11183&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+## 30. [连续子数组的最大和](https://www.nowcoder.com/practice/459bd355da1549fa8a49e350bf3df484?tpId=13&tqId=11183&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
 **数组 && 滑动窗口**
 
@@ -992,7 +984,7 @@ public String PrintMinNumber(int[] numbers) {
     for (int i = 0; i < n; i++) {
         str[i] = numbers[i] + "";
     }
-    Arrays.sort(str, (o1, o2) -> (o1 + "" + 02).compareTo(o2 + "" + o1));
+    Arrays.sort(str, (o1, o2) -> (o1 + "" + o2).compareTo(o2 + "" + o1));
     for (String item : str)
         res += item;
     return res;
@@ -1035,22 +1027,18 @@ public String PrintMinNumber(int[] numbers) {
 ```java
 /* 维护一个数组的三个指针 */
 public int GetUglyNumber_Solution(int index) {
-    if (index <= 6)
-        return index;
+    if (index <= 6)	return index;
     int[] dp = new int[index];
     dp[0] = 1;
-    int i2 = 0, i3 = 0, i5 = 0;
+    int p2 = 0, p3 = 0, p5 = 0;
     for (int i = 1; i < index; i++) {
-        val2 = dp[i2] * 2;
-        val3 = dp[i3] * 3;
-        val5 = dp[i5] * 5;
+        int val2 = dp[p2] * 2;
+        int val3 = dp[p3] * 3;
+        int val5 = dp[p5] * 5;
         dp[i] = Math.min(val2, Math.min(val3, val5));
-        if (dp[i] == val2)
-            i2++;
-        if (dp[i] == val3)
-            i3++;
-        if (dp[i] == val5)
-            i5++;
+        if (dp[i] == val2)	p2++;
+        if (dp[i] == val3)	p3++;
+        if (dp[i] == val5)	p5++;
     }
     return dp[index - 1];
 }
@@ -1098,19 +1086,15 @@ public int GetUglyNumber_Solution(int index) {
 
 ```java
 public int FirstNotRepeatingChar(String str) {
-    if (str == null || str.length() == 0)
-        return -1;
+    if (str == null || str.length() == 0)	return -1;
     HashMap<Character, Integer> map = new HashMap<>();
     for (int i = 0; i < str.length(); i++) {
-        int val = 0;
-        if (map.containsKey(str.charAt(i))) {
-            val = map.get(str.charAt(i));
-        }
-        map.put(str.charAt(i), ++val);
+        int count = map.getOrDefault(str.charAt(i), 0);
+        map.put(str.charAt(i), ++count);
     }
     for (int i = 0; i < str.length(); i++) {
-        if (map.get(str.charAt(i)) == 1)
-            return i;
+        if (map.get(str.charAt(i)) == 1)	return i;
+        else	continue;
     }
     return -1;
 }
@@ -1170,21 +1154,14 @@ private void merge(int[] arr, int l , int m, int h) {
 
 ```java
 public ListNode FindFirstCommonNode(ListNode pHead1, ListNode pHead2) {
-    if (pHead1 == null || pHead2 == null) 
-        return null;
-    ListNode cur1 = pHead1;
-    ListNode cur2 = pHead2;
-    while (cur1 != cur2) {
-        if (cur1 == null)
-            cur1 = pHead2;
-        else 
-            cur1 = cur1.next;
-        if (cur2 == null)
-            cur2 = pHead1;
-        else
-            cur2 = cur2.next;
+    if (pHead1 == null || pHead2 == null)	return null;
+    ListNode p1 = pHead1;
+    ListNode p2 = pHead2;
+    while (p1 != p2) {
+        p1 = p1 == null ? pHead2 : p1.next;
+        p2 = p2 == null ? pHead1 : p2.next;
     }
-    return cur1;
+    return p1;
 }
 ```
 
@@ -1206,44 +1183,35 @@ public ListNode FindFirstCommonNode(ListNode pHead1, ListNode pHead2) {
 5. 二分查找：左闭右开区间 `[0, length)`
 
    ```java
-   public int binSearch(int[] array, int target) {
-       int low = 0;
-       int high = array.length;
-       while(low < high) {
-           int mid = low + (high - low) / 2;
-           if (array[mid] < target)
-               low = mid + 1;
-           else
-               high = mid;
+   private int binSearch(int[] arr, int target) {
+       int left = 0;
+       int right = arr.length;
+       while (left < right) {
+           int mid = left + (right - left) / 2;
+           if (arr[mid] >= target)	right = mid;
+           else	left = mid + 1;
        }
-       return low;
+       return left;
    }
    ```
 
 ```java
-public int GetNumberOfK(int[] array, int k) {
-    if (array == null)
-        return 0;
-    int first = binSearch(array, k);
-    int last = binSearch(array, k + 1);
-    if (first == array.length || array[first] != k)
-        return 0;
-    else
-        return last - first;
+public int GetNumberOfK(int [] array , int k) {
+    if (array == null || array.length == 0)	return 0;
+    int left = binSearch(array, k);
+    int right = binSearch(array, k + 1);
+    if (left == array.length || array[left] != k)	return 0;
+    else	return right - left;
 }
-private int binSearch(int[] array, int k) {
-    int l = 0;
-    int r = array.length;
-    while (l < r) {
-        int mid = l + (r - l) / 2;
-        if (k > array[mid]) 
-            l = mid + 1;
-        else if (k < array[mid])
-            r = mid;
-        else
-            r = mid;
+private int binSearch(int[] arr, int target) {
+    int left = 0;
+    int right = arr.length;
+    while (left < right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] >= target)	right = mid;
+        else	left = mid + 1;
     }
-    return l;
+    return left;
 }
 ```
 

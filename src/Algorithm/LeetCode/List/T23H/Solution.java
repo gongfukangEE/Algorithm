@@ -46,41 +46,27 @@ public class Solution {
      * 再不停的往下划分，直到划分成只有一个或两个链表的任务，开始合并
      */
     public ListNode mergeKLists(ListNode[] lists) {
-        if (lists.length == 0) {
-            return null;
-        }
-        int length = lists.length;
-        while (length > 1) {
-            int k = (length + 1) / 2;
-            for (int i = 0; i < length / 2; i++) {
-                lists[i] = merge2List(lists[i], lists[i + k]);
-            }
-            length = k;
-        }
-        return lists[0];
+        return helpMerge(lists, 0, lists.length - 1);
     }
-
-    private ListNode merge2List(ListNode l1, ListNode l2) {
-        ListNode res = new ListNode(-1);
-        ListNode cur = res;
-        while (l1 != null || l2 != null) {
-            if (l1 == null) {
-                cur.next = l2;
-                break;
-            }
-            if (l2 == null) {
-                cur.next = l1;
-                break;
-            }
-            if (l1.val <= l2.val) {
-                cur.next = l1;
-                l1 = l1.next;
-            } else {
-                cur.next = l2;
-                l2 = l2.next;
-            }
-            cur = cur.next;
+    // 划分链表
+    private ListNode helpMerge(ListNode[] lists, int start, int end) {
+        if (start > end)	return null;
+        if (start == end)	return lists[start];
+        int mid = (start + end) / 2;
+        ListNode left = helpMerge(lists, start, mid);
+        ListNode right = helpMerge(lists, mid + 1, end);
+        return merge(left, right);
+    }
+    // 合并两个有序链表
+    private ListNode merge(ListNode l1, ListNode l2) {
+        if (l1 == null)	return l2;
+        if (l2 == null)	return l1;
+        if (l1.val <= l2.val) {
+            l1.next = merge(l1.next, l2);
+            return l1;
+        } else {
+            l2.next = merge(l1, l2.next);
+            return l2;
         }
-        return res.next;
     }
 }
