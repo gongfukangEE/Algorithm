@@ -1298,45 +1298,41 @@ public void FindNumsAppearOnce(int[] array, int num1[], int num2[]) {
 ```java
 /* 链表实现滑动窗口 */
 public ArrayList<ArrayList<Integer>> FindContinuousSequence(int sum) {
+    ArrayList<ArrayList<Integer>> res = new ArrayList<>();
     ArrayList<Integer> list = new ArrayList<>();
-    ArrayList<ArrayList<Integer>> resList = new ArrayList<>();
-    if (sum <= 1)
-        return resList;
-    int totalSum = 0;
+    if (sum <= 1)	return res;
+    int curSum = 0;
     for (int i = 1; i < sum; i++) {
-        totalSum += i;
+        curSum += i;
         list.add(i);
-        while (totalSum > sum) {
-            int val = list.get(0);
-            totalSum -= val;
+        while (curSum > sum) {
+            curSum -= list.get(0);
             list.remove(0);
         }
-        if (totalSum == sum)
-            resList.add(new ArrayList(list));
+        if (curSum == sum) {
+            res.add(new ArrayList(list));
+        }
     }
-    return resList;
+    return res;
 }
 /* 双指针实现滑动窗口 */
 public ArrayList<ArrayList<Integer>> FindContinuousSequence(int sum) {
-    ArrayList<ArrayList<Integer>> resList = new ArrayList<>();
-    if (sum <= 1)
-        return resList;
-    int totalSum = 0;
-    int start = 1;
-    for (int i = 1; i < sum; i++) {
-        totalSum += i;
-        while(totalSum > sum) {
-            totalSum -= start;
-            start++;
+    ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+    if (sum <= 1)	return res;
+    int start = 1, curSum = 0;
+    for (int i = 0; i < sum; i++) {
+        curSum += i;
+        while (curSum > sum) {
+            curSum -= start;
+            start--;
         }
-        if (totalSum == sum) {
+        if (curSum == sum) {
             ArrayList<Integer> list = new ArrayList<>();
-            for (int j = start; j <= i; j++)
-                list.add(j);
-            resList.add(new ArrayList(list));
+            for (int j = start; j <= i; j++)	list.add(i);
+            res.add(list);
         }
     }
-    return resList;
+    return res;
 }
 ```
 
@@ -1403,6 +1399,42 @@ private int BinaySearch(int[] array, int low, int high, int target) {
 }
 ```
 
+**三数之和为 0**
+
+```java
+public List<List<Integer>> threeSum(int[] nums) {
+    List<List<Integer>> resList = new ArrayList<>();
+    if (nums == null || nums.length == 0)	return resList;
+    // 排序去重
+    Arrays.sort(nums);
+    for (int i = 0; i < nums.length; i++) {
+        // 剪枝
+        if (nums[i] > 0)	break;
+        // 外层去重
+        if (i > 0 && nums[i] == nums[i - 1])	continue;
+        int start = i + 1, end = nums.length - 1;
+        while (start < end) {
+            if (nums[i] + nums[start] + nums[end] > 0)	end--;
+            else if (nums[i] + nums[start] + nums[end] < 0)	start++;
+            else {
+                List<Integer> list = new ArrayList<>();
+                list.add(nums[i]);
+                list.add(nums[start]);
+                list.add(nums[end]);
+                resList.add(list);
+                // 内层去重
+                while (start < end && nums[start] == nums[start + 1])	start++;
+                while (start < end && nums[end] == nums[end - 1])	end--;
+                // 更新直到不重复
+                start++;
+                end--;
+            }
+        }
+    }
+    return resList;
+}
+```
+
 ## 43. [左旋转字符串](https://www.nowcoder.com/practice/12d959b108cb42b1ab72cef4d36af5ec?tpId=13&tqId=11196&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
 **字符串 && 递归**
@@ -1417,45 +1449,39 @@ private int BinaySearch(int[] array, int low, int high, int target) {
 ```java
 /* 递归 */
 public String LeftRotateString(String str,int n) {
-    if (str == null || str.length() == 0)
-        return "";
-    if (n == 0)
-        return str;
+    if (str == null || str.length() == 0)	return "";
+    if (n == 0)	return str;
+    int length = str.length();
+    n = n % length;
     char[] chars = str.toCharArray();
-    reverse(chars, 0, n - 1);
-    reverse(chars, n, chars.length - 1);
-    reverse(chars, 0, chars.length - 1);
-    return new String(chars);
+    resver(chars, 0, n - 1);
+    resver(chars, n, length - 1);
+    resver(chars, 0, length - 1);
+    return String.valueOf(chars);
 }
-private void reverse(char[] chars, int i, int j) {
-    while(i < j)
-        swap(chars, i++, j--);
+private void resver(char[] chars, int start, int end) {
+    if (start >= end)	return;
+    while (start < end)	swap(chars, start++, end--);
 }
 private void swap(char[] chars, int i, int j) {
-    char c = chars[i];
+    char temp = chars[i];
     chars[i] = chars[j];
-    chars[j] = c;
+    chars[j] = temp;
 }
 /* 模拟循环 */
 public String LeftRotateString(String str,int n) {
-    if (str == null || str.length() == 0)
-        return "";
-    if (n == 0)
-        return str;
-    char[] chars = str.toCharArray();
-    int index = n % chars.length;
-    StringBuffer sb = new StringBuffer();
-    for (int i = index; i < chars.length; i++) 
-        sb.append(chars[i]);
-    for (int i = 0; i < indez; i++) 
-        sb.append(chars[i]);
+    if (str == null || str.length() == 0)	return "";
+    if (n == 0)	return str;
+    int length = str.length();
+    n = n % length;
+    StringBuilder sb = new StringBuilder();
+    for (int i = n; i < length; i++)	sb.append(str.charAt(i));
+    for (int i = 0; i < n; i++)	sb.append(str.charAt(i));
     return sb.toString();
 }
 ```
 
 ## 44. [翻转单词顺序列](https://www.nowcoder.com/practice/3194a4f4cf814f63919d0790578d51f3?tpId=13&tqId=11197&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
-
-**字符串 && 递归**
 
 1. 不使用额外的空间
 2. 先反转每个单词，使用 `start` 和 `end` 来标记每个单词，`end` 走到空格时，反转 `start - end-1`；`end` 走到最后时，反转 `start - end`
@@ -1463,33 +1489,32 @@ public String LeftRotateString(String str,int n) {
 
 ```java
 public String ReverseSentence(String str) {
-    if (str == null || str.length() == 0)
-        return "";
+    if (str == null || str.length() == 0)	return null;
     char[] chars = str.toCharArray();
-    for (int i = 0; i < chars.length; ) {
-        int start = i;
-        int end = i;
-        while (chars[end] != ' ' && end < chars.length - 1) {
-            end++;
-        }
-        if (end == chars.length - 1) {
-            reverse(chars, start, end);
-            break;
+    int indexe = 0;
+    while (index < chars.length) {
+        int start = index;
+        int end = index;
+        while (chars[end] != ' ' && end < chars.length - 1)	end++;
+        if (end < chars.length - 1) {
+            reverse (chars, start, end - 1);
+            index = end + 1;
         } else {
-            reverse(chars, start, end - 1);
+            reverse (chars, start, end);
+            break;
         }
     }
     reverse(chars, 0, chars.length - 1);
-    return new String(chars);
+    return String.valueOf(chars);
 }
-private void reverse(char[] chars, int i, int j) {
-    while(i < j)
-        swap(chars, i++, j--);
+private void reverse(char[] chars, int start, int end) {
+    if (start >= end)	return;
+    while (start < end)	swap(chars, start++, end--);
 }
 private void swap(char[] chars, int i, int j) {
-    char c = chars[j];
-    chars[j] = chars[i];
-    chars[i] = c;
+    char temp = chars[i];
+    chars[i] = chars[j];
+    chars[j] = temp;
 }
 ```
 
