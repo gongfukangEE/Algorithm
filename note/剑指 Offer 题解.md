@@ -1399,7 +1399,7 @@ private int BinaySearch(int[] array, int low, int high, int target) {
 }
 ```
 
-**三数之和为 0**
+**[三数之和为 0](<https://leetcode-cn.com/problems/3sum/>)**
 
 ```java
 public List<List<Integer>> threeSum(int[] nums) {
@@ -1558,17 +1558,15 @@ public boolean isContinuous(int[] numbers) {
    2. `count = (count + m -1) % list.size()` 模拟环，记录下一个 m - 1 元素在当前链表的位置
 
 ```java
-/* 数组 */
 public int LastRemaining_Solution(int n, int m) {
-    if (n == 0 || m == 0)
-        return -1;
     int[] arr = new int[n];
     int i = -1, count = n, step = 0;
-    while(count > 0) {
-        if (++i = n)
-            i = 0;
-        if (arr[i] == -1)
-            continue;
+    while (count > 0) {
+        // 判读尽头
+        if (++i == n)	i = 0;
+        // 去掉已经出去的
+        if (arr[i] == -1)	continue;
+        // 判断出去
         if (++step == m) {
             arr[i] = -1;
             step = 0;
@@ -1579,11 +1577,9 @@ public int LastRemaining_Solution(int n, int m) {
 }
 /* 链表 */
 public int LastRemaining_Solution(int n, int m) {
-    if (n < 1 || m < 1)
-        return -1;
+    if (n < 1 || m < 1)		return -1;
     ArrayList<Integer> list = new ArrayList<Integer>();
-    for (int i = 0; i < n; i++)
-        list.add(i);
+    for (int i = 0; i < n; i++)		list.add(i);
     int count = 0;
     while (list.size() > 1) {
         count = (count + m - 1) % list.size();
@@ -1853,21 +1849,22 @@ public char FirstAppearingOnce() {
    ```
 
 ```java
+// 更加严谨：判断链表是否有环，如果有环则给出环的入口节点
 public ListNode EntryNodeOfLoop(ListNode pHead) {
-    if (pHead == null || pHead.next == null)
-        return null;
-    ListNode fast = pHead;
-    ListNode slow = pHead;
-    do {
-        fast = fast.next.next;
-        slow = slow.next;
-    }while (fast != slow)
-        fast = pHead;
-    while (fast != slow) {
-        fast = fast.next;
-        slow = slow.next;
+    if (pHead == null || pHead.next == null)	return null;
+    ListNode p1 = pHead, p2 = pHead;
+    while (p2 != null && p2.next != null) {
+        p1 = p1.next;
+        p2 = p2.next.next;
+        if (p1 == p2)	break;
     }
-    return fast;
+    if (p2 == null || p2.next == null)	return null;
+    p2 = pHead;
+    while (p1 != p2) {
+        p1 = p1.next;
+        p2 = p2.next;
+    }
+    return p1;
 }
 ```
 
@@ -1887,6 +1884,18 @@ public ListNode EntryNodeOfLoop(ListNode pHead) {
    5. 如果当前节点重复，即 `fast.val = fast.next.val`，记录 `value = fast.val`，与 `value` 相等的节点，全部删除，再移动 `slow`
 
 ```java
+/* 递归 */
+public ListNode deleteDuplication(ListNode pHead) {
+    if (pHead == null || pHead.next == null)	return pHead;
+    if (pHead.val == pHead.next.val) {
+        ListNode node = pHead.next;
+        while (node != null && node.val == pHead.val)	node = node.next;
+        return deleteDuplication(node);
+    } else {
+        pHead.next = deleteDuplication(pHead.next);
+        return pHead;
+    }
+}
 /* 快慢指针 */
 public ListNode deleteDuplication(ListNode pHead) {
     ListNode newHead = new ListNode(-1);
@@ -1906,22 +1915,22 @@ public ListNode deleteDuplication(ListNode pHead) {
     }
     return newHead.next;
 }
-/* 递归 */
-    public ListNode deleteDuplication(ListNode pHead) {
-        if (pHead == null || pHead.next == null) {
-            return pHead;
-        }
-        if (pHead.val == pHead.next.val) {
-            ListNode node = pHead.next;
-            while (node != null && pHead.val == node.val) {
-                node = node.next;
-            }
-            return deleteDuplication(node);
-        } else {
-            pHead.next = deleteDuplication(pHead.next);
-            return pHead;
-        }
+```
+
+**[删除链表的重复节点仅保留一个](<https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/submissions/>)**
+
+```java
+public ListNode deleteDuplicates(ListNode head) {
+    if (head == null || head.next == null)	return head;
+    if (head.val == head.next.val) {
+        ListNode node = head.next;
+        while (node != null && node.next != null && node.next.val == head.val)	node = node.next;
+        return deleteDuplicates(node);
+    } else {
+        head.next = deleteDuplicates(head.next);
+        return head;
     }
+}
 ```
 
 ## 57. [二叉树的下一个节点](https://www.nowcoder.com/practice/9023a0c988684a53960365b889ceaf5e?tpId=13&tqId=11210&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
@@ -1990,37 +1999,30 @@ private boolean doIsSymmetrical(TreeNode left, TreeNode right) {
 1. 利用 `Queue` 进行层序遍历
 2. 奇数行`List` 直接添加到 `resList`
 3. 偶数行 `List` 反转后再添加到 `resList`
-4. Tips:
-   1. `list == null` 理解为没有为 `list` 分配空间
-   2. `list.size() == 0` 理解为为 `list` 分配了空间，但是 `list` 中没有元素
 
 ```java
 public ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
-    ArrayList<ArrayList<Integer>> resList = new ArrayList<>();
-    Queue<TreeNode> queue = new LinkedList<>();
-    if (pRoot == null)
-        return resList;
-    queue.offer(pRoot);
-    int count = 1;
-    int size = 0;
-    while(!queue.isEmpty()){
+    ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+    Queue<TreeNode> queue = new LinkedList<TreeNode>();
+    if (pRoot == null)	return res;
+    queue.add(pRoot);
+    boolean reverse = false;
+    while (!queue.isEmpty()) {
         ArrayList<Integer> list = new ArrayList<>();
-        size = queue.size();
+        int size = queue.size();
         while(size-- > 0) {
             TreeNode node = queue.remove();
-            if (node == null)
-                continue;
             list.add(node.val);
-            queue.offer(node.left);
-            queue.offer(node.right);
+            if (node.left != null)	queue.add(node.left);
+            if (node.right != null)	queue.add(node.right);
         }
-        if (count % 2 == 0)
-            Collections.reverse(list);
-        if (list.size() != 0)
-            resList.add(list);
-        count++;
+        if (list.size() != 0) {
+            if (reverse) 	Collections.reverse(list);
+            res.add(list);
+            reverse = !reverse;
+        }
     }
-    return resList;
+    return res;
 }
 ```
 
@@ -2029,27 +2031,23 @@ public ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
 **二叉树 && 栈和队列**
 
 ```java
-public ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
-    ArrayList<ArrayList<Integer>> resList = new ArrayList<>();
-    Queue<TreeNode> queue = new LinkedList<>();
-    if (pRoot == null)
-        return resList;
+ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
+    ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+    if (pRoot == null)	return res;
+    Queue<TreeNode> queue = new LinkedList<TreeNode>();
     queue.add(pRoot);
-    while(!queue.isEmpty()){
+    while (!queue.isEmpty()) {
         ArrayList<Integer> list = new ArrayList<>();
         int size = queue.size();
-        while(size-- > 0) {
+        while (size-- > 0) {
             TreeNode node = queue.remove();
-            if (node == null)
-                continue;
-           	list.add(node.val);
-            queue.add(node.left);
-            queue.add(node.right);
+            list.add(node.val);
+            if (node.left != null)	queue.add(node.left);
+            if (node.right != null) queue.add(node.right);
         }
-        if (list.size() != 0) 
-            resList.add(list);
+        if (list.size() != 0)	res.add(list);
     }
-    return resList;
+    return res;
 }
 ```
 
