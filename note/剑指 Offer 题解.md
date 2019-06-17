@@ -2105,21 +2105,30 @@ private TreeNode Deserialize(String[] dStr) {
 
 ```java
 public TreeNode KthNode(TreeNode pRoot, int k) {
-    if (pRoot == null || k == 0)
-        return null;
-    Stack<TreeNode> stack = new Stack<TreeNode>();
-    TreeNode node = pRoot;
-    do {
-        if (node != null){
-            stack.push(node);
-            node  = node.left;
-        } else {
-            node = stack.pop();
-            if (--k == 0)
-                return node;
-            node = node.right;
+    if (pRoot == null || k <= 0)	return null;
+    Stack<TreeNode> stack = new Stack<>();
+    int count = 0;
+    while (pRoot != null || !stack.isEmpty()) {
+        while (pRoot != null) {
+            stack.push(pRoot);
+            pRoot = pRoot.left;
         }
-    } while(node != null || !stack.isEmpty());
+        pRoot = stack.pop();
+        if (--k == 0)	return pRoot;
+        pRoot = pRoot.right;
+    }
+    return null;
+}
+/* 中序递归 */
+private int count = 0;
+TreeNode KthNode(TreeNode pRoot, int k) {
+    if (pRoot == null)  return null;
+    TreeNode left = KthNode(pRoot.left, k);
+    if (left !=  null)  return left;
+    count++;
+    if (count == k)     return pRoot;
+    TreeNode right = KthNode(pRoot.right, k);
+    if (right != null)  return right;
     return null;
 }
 ```
@@ -2129,29 +2138,28 @@ public TreeNode KthNode(TreeNode pRoot, int k) {
 **数组 && 栈和队列**
 
 1. 小顶堆存储右边元素，大顶堆存储左边元素，并且大顶堆的堆顶小于小顶堆的堆顶
-2. 分为奇数和偶数
-3. 偶数：新加入的元素进入大顶堆，筛选出最大的元素进入小顶堆，返回 `minHeap.peek() + maxHeap.peek() / 2`
-4. 奇数：新加入的元素进入小顶堆，筛选出最小的元素进入大顶堆，返回 `minHeap.peek()`
+2. 奇数：先放入 maxHeap，然后取出 maxHeap 的堆顶元素放入 minHeap，返回 `minHeap().peek()`
+3. 偶数：先放入 minHeap，然后取出 minHeap 的堆定元素放入 maxHeap，返回 `minHeap.peek() + maxHeap.peek() / 2`
 
 ```java
-private PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>();
-private PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>((o1, o2) -> o2 - o1);
 private int count = 0;
+private PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+private PriorityQueue<Integer> maxHeap = new PriorityQueue<>((o1, o2) -> (o2 - o1));
 public void Insert(Integer num) {
-    if (count % 2 != 0){
-        minHeap.add(num);
-        maxHeap.add(minHeap.remove());
-    } else {
+    // 计数
+    count++;
+    if (count % 2 == 1) {
         maxHeap.add(num);
         minHeap.add(maxHeap.remove());
+    } else {
+        minHeap.add(num);
+        maxHeap.add(minHeap.remove());
     }
-    ++count;
 }
+
 public Double GetMedian() {
-    if (count % 2 != 0)
-        return (double)minHeap.peek();
-    else
-        return (double)(maxHeap.peek() + minHeap.peek()) / 2;
+    if (count % 2 == 1)	return (double)minHeap.peek();
+    else 	return (double)(maxHeap.peek() + minHeap.peek()) / 2;
 }
 ```
 
