@@ -2165,31 +2165,43 @@ public Double GetMedian() {
 
 ## 64. [滑动窗口的最大值](https://www.nowcoder.com/practice/1624bc35a45c42c0bc17d17fa0cba788?tpId=13&tqId=11217&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-**滑动窗口 && 堆**
-
-1. 维护一个大小为 size 的大顶堆
-2. 窗口滑动一次：左边元素移除堆，右边元素加入堆
-3. 返回堆顶
+- 双端队列：双端队列可以从两端添加删除元素，双端队列存储的是元素下标
+  - 新加入的元素 item，与双端队列中的元素对比
+  - 小于 item 的，则不可能是滑动窗口的最大值，直接移出队列
+  - 大于 item 的，判断元素是否还在窗口内，如果不在了直接移除，在则保留元素
+  - 双端队列从大到小存储元素，队首元素就是滑动窗口中的最大值
+- 堆：维护一个大小为 size 的大顶堆，窗口滑动一次，左边元素移除堆，右边元素加入堆，返回堆顶元素
 
 ```java
-public ArrayList<Integer> maxInWindows(int[] num, int size){
-    ArrayList<Integer> list = new ArrayList<Integer>();
-    if (num == null || num.length == 0 || size == 0)
-        return list;
-    PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>((o1, o2) -> o2 - o1);
-    for (int i = 0; i < size; i++){
-        if (i > num.length - 1) 
-            return list;
-        maxHeap.add(num[i]);
+/* 双端队列 */
+public ArrayList<Integer> maxInWindows(int [] num, int size) {
+    ArrayList<Integer> res = new ArrayList<>();
+    if (num == null || size < 1 || size > num.length) 	return res;
+    LinkedList<Integer> list = new LinkedList<>();
+    for (int i = 0; i < size; i++) {
+        while (!list.isEmpty() && num[i] > num[list.getLast()]) 	list.removeLast();
+        list.add(i);
     }
+    res.add(num[list.getFirst()]);
+    for (int i = size; i < num.length; i++) {
+        while (!list.isEmpty() && num[i] > num[list.getLast()]) 	list.removeLast();
+        list.add(i);
+        if (i - list.getFirst() + 1 > size) 	list.removeFirst();
+        res.add(num[list.getFirst()]);
+    }
+    return res;
+}
+/* MaxHeap */
+public ArrayList<Integer> maxInWindows(int [] num, int size) {
+    ArrayList<Integer> list = new ArrayList<>();
+    if (num == null || size <= 0 || size > num.length) 	return list;
+    PriorityQueue<Integer> maxHeap = new PriorityQueue<>(size, (o1, o2) -> (o2 - o1));
+    for (int i = 0; i < size; i++) 	maxHeap.add(num[i]);
     list.add(maxHeap.peek());
-    int start = 0, end = size - 1;
-    while(end < num.length - 1) {
-        end++;
-        maxHeap.add(num[end]);
-        maxHeap.remove(new Integer(num[start]));
+    for (int i = size; i < num.length; i++) {
+        maxHeap.remove(new Integer(num[i - size]));
+        maxHeap.add(num[i]);
         list.add(maxHeap.peek());
-        start++;
     }
     return list;
 }
