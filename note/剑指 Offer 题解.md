@@ -2217,41 +2217,39 @@ public ArrayList<Integer> maxInWindows(int [] num, int size) {
 4. 递归结束：字符重置为未标记
 
 ```java
-private int rows;
-private int cols;
-private boolean[][] mark;
-private char[] str;
-private final static int[][] next = {{0, -1}, {0, 1}, {-1, 0}, {1, 0}};
+private int[][] next = {{0, -1}, {0, 1}, {-1, 0}, {1, 0}};
 public boolean hasPath(char[] matrix, int rows, int cols, char[] str) {
-    this.rows = rows;
-    this.cols = cols;
-    this.str = str;
-    char[][] wordMatrix = buildMatrix(matrix);
-    this.mark = new boolean[rows][cols];
-    for (int i = 0; i < rows; i++)
-        for (int j = 0; j < cols; j++)
-            if (dfs(wordMatrix,i, j, 0))
-                return true;
-    return false;
-}
-private boolean dfs(char[][] wordMatrix,int row, int col, int index) {
-    if (str.length == index)
-        return true;
-    if (row < 0 || col < 0 || row >= wordMatrix.length || col >= wordMatrix[0].length) {
-        return false;
-    }
-    char ch = str[index];
-    if (!mark[row][col] && ch == wordMatrix[row][col]) {
-        mark[row][col] = true;
-        for (int[] item : next)
-            if (dfs(wordMatrix,row + item[0], col + item[1], index + 1))
-                return true;
-        mark[row][col] = false;
-        return false;
+    if (matrix == null || matrix.length == 0 || str == null || str.length == 0) 	return false;
+    boolean[][] marked = new boolean[rows][cols];
+    char[][] resMatrix = buildMatrix(matrix, rows, cols);
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            if (resMatrix[i][j] == str[0]) {
+                if (dfs(resMatrix, i, j, 0, rows, cols, str, marked))   return true;
+            }
+        }
     }
     return false;
 }
-private char[][] buildMatrix(char[] matrix) {
+private boolean dfs(char[][] matrix, int i, int j, int index, int rows, int cols, char[] target, boolean[][] marked) {
+    if (index == target.length) 	return true;
+    if (i < 0 || j < 0 || i >= rows || j >= cols || marked[i][j] 
+        || matrix[i][j] != target[index])	return false;
+    if (matrix[i][j] == target[index]) {
+        // 标记
+        marked[i][j] = true;
+        // 递归
+        for (int[] dir : next) {
+            if (dfs(matrix, i + dir[0], j + dir[1], index + 1, rows, 
+                    cols, target, marked)) 	return true;
+        }
+        // 取消标记
+        marked[i][j] = false;
+        return false;
+    }
+    return false;
+}
+private char[][] buildMatrix(char[] matrix, int rows, int cols) {
     char[][] wordMatrix = new char[rows][cols];
     int index = -1;
     for (int i = 0; i < rows; i++)
@@ -2288,14 +2286,11 @@ public int movingCount(int threshold, int rows, int cols) {
     return count;
 }
 private void dfs(int[][] matrix, int row, int col) {
-    if (row < 0 || col < 0 || row >= rows || col >= cols || mark[row][col])
-        return;
+    if (row < 0 || col < 0 || row >= rows || col >= cols || mark[row][col]) 	return;
     mark[row][col] = true;
-    if (matrix[row][col] > threshold)
-        return;
+    if (matrix[row][col] > threshold)	return;
     count++;
-    for (int[] item : next)
-        dfs(matrix, row + item[0], col + item[1]);
+    for (int[] item : next) 	dfs(matrix, row + item[0], col + item[1]);
 }
 private int[][] buildSumMatrix(int rows, int cols) {
     int[] sumOne = new int[Math.max(rows, cols)];
