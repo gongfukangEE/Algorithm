@@ -1320,15 +1320,15 @@ public ArrayList<ArrayList<Integer>> FindContinuousSequence(int sum) {
     ArrayList<ArrayList<Integer>> res = new ArrayList<>();
     if (sum <= 1)	return res;
     int start = 1, curSum = 0;
-    for (int i = 0; i < sum; i++) {
+    for (int i = 1; i < sum; i++) {
         curSum += i;
         while (curSum > sum) {
             curSum -= start;
-            start--;
+            start++;
         }
         if (curSum == sum) {
             ArrayList<Integer> list = new ArrayList<>();
-            for (int j = start; j <= i; j++)	list.add(i);
+            for (int j = start; j <= i; j++)	list.add(j);
             res.add(list);
         }
     }
